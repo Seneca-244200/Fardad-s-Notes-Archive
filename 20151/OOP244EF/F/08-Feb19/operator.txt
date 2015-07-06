@@ -1,0 +1,49 @@
+
+Memeber operators: assuming @ is an operator
+Unary
+@op
+  !a    bool Aclass::operator!()
+  +i    MaybeIclass Iclass::operator+()
+  --a   MaybeAclass Aclass::operator--()
+op@
+  a++   MaybeAclass Aclass::operator++(int)
+  i--   MaybeIclass Iclass::operator--(int)
+Binary
+Lop @ Rop
+No Side effect:
+a + b    MayBeAclass  Aclass::operator+(const Bclass& rightOperand)const  // *this is left Operand
+a / b    MayBeAclass  Aclass::operator/(const Bclass& rightOperand)const  // *this is left Operand
+a > b           bool  Aclass::operator>(const Bclass& rightOperand)const  // *this is left Operand
+Side effect:
+a = b    Aclass& Aclass::operator=(const Bclass& rightOperand)  // *this is left Operand
+a += b   Aclass& Aclass::operator+=(const Bclass& rightOperand)  // *this is left Operand
+
+T1 a;
+T2 b;
+a = b;
+a.=(b)
+Note: assignment operator can only be overloaded as a MEMBER operator
+
+Helper operators, non-members;
+
+T1 a;
+T2 b;
+T3 c;
+c = a @ b;
+T3 operator@(T1 x, T2 y);
+
+Overloading for cin and cout
+
+Tclass T1, T2;
+cout<<T1<<endl;            ostream& operator<<(ostream& ostr, const Tclass& rightOperand){
+                             // do the printing for rightOperand
+                             return ostr;
+                           }
+
+cin>>T1>>T2;               istream& operator<<(istream& istr, Tclass& rightOperand){
+                             // do the reading for rightOperand
+                             return istr;
+                           }
+
+
+

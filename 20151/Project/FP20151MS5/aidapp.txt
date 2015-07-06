@@ -1,0 +1,7 @@
+P,123,Rice and Beans,12,Bags,200,200,2018/12/22
+N,122,Bucket,10,150,300
+P,124,Corn,4,Packs,0,140,2018/04/03
+N,200,Blanket,20,10,50
+P,132,Banana,0.99,Kilos,6,10,2015/05/13
+N,111,Water Container,11.32,19,400
+N,998,Mosquito Net,8.34,10,300

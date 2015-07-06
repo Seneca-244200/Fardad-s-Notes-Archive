@@ -1,0 +1,9 @@
+a = ++b;
+a = b.addone();
+
+a = b + c;
+a = b.+(c);
+a = b.add(c);
+
+a = add(b, c);
+

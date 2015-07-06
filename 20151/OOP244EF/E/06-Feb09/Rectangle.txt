@@ -1,0 +1,28 @@
+Shoe Box
+XXXXXXXXXXXXXXXXXXXX
+X                  X
+X                  X
+X                  X
+X                  X
+XXXXXXXXXXXXXXXXXXXX
+
+XX
+XX
+When allocating memory
+1- IF the pointer you are using
+   is already used for DMA? (if not NULL)
+   Yes: make sure you delete it
+2- find the EXACT size of memory 
+   needed. 
+3- allocate memory and store the address
+   in the pointer
+4- copy the data into the allocated
+   memory
+   
+When Deleting memory:
+1- IF the pointer used for DMA?
+   Yes: make sure you delete it
+   No: DON'T
+2- make it NULL
+==================
+1- Always set lose pointers to NULL.

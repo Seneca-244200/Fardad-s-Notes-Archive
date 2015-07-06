@@ -1,0 +1,28 @@
+ AClass a;
+ BClass b;
+ 
+ c <- a @ b    // binary
+ c = a + b;    +: no side effect  
+ a += b;    
+
+
+ c <- @a       // unary
+ prefix
+ -a;         -: no side effect
+ !b;         !: no side effect
+++a;
+postfix
+b--;
+c++;
+
+Operators are functions
+a += b;
+a.add(b);
+
+-- non member -- yuuuuck!!!!
+ AClass a;
+ BClass b;
+ CClass c;
+ c <- a @ b    // binary
+
+ CClass operator@(AClass LO, BClass RO);
