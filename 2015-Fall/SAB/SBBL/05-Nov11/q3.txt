@@ -1,0 +1,17 @@
+/*
+Quiz 3:
+overload operator<< so the animal can
+get to display its name when it is printed
+using cout.
+
+Animal A("Ugly");
+
+cout << A << endl;
+
+Ugly
+>
+create a file called q3.txt and write the 
+answer and then
+~fardad.soleimanloo/submit q3<ENTER>
+
+*/
