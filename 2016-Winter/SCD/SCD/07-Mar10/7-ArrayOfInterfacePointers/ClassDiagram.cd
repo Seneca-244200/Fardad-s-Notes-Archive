@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sict::Animal" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sict::Bird" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwAAAAAAAAACAAAAAAAAAAAEEAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>bird.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sict::Budgie" Collapsed="true">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAACAAAAABAAAAGAEAACAAAAAAAAAAQA=</HashCode>
+      <FileName>budgie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sict::Cat" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAQAAQAAACAAAAAAAAAAAAEAAAAAAAAAAAACAA=</HashCode>
+      <FileName>cat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sict::GoldFish" Collapsed="true">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAACAAAAAACAAAAAAIAAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>goldfish.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sict::Pet" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAACACAAAAAAAAAAAAEAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>pet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
