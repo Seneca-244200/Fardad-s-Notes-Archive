@@ -1,0 +1,33 @@
+Answer this quiz in a file called q89.txt on matrix and submit it as follows:
+~fardad.soleimanloo/submit oopq89
+Q8 - Convert the following function to a template so it can be used for any type of array.
+int search(const double array[], const double& val, int size) {
+int i = 0;
+int foundIndex = -1;
+for (i = 0; i < size;i++) {
+if (array[i] == val) {
+foundIndex = i;
+}
+}
+return i;
+}
+Then explain what the type needs to implement for the template to function?
+Q9- if this quiz is saved under the file name quiz.txt, what is the exact output of the following program:
+#include <fstream>
+#include <iostream>
+using namespace std;
+int main() {
+int n = 10;
+int i;
+char str[81] = "empty!";
+fstream file("quiz.txt", ios::in);
+for (i = 0;i < 5;i++) {
+while (file.get() != '=');
+file >> n;
+cout << n << endl;
+}
+file >> str;
+cout << str;
+cout << endl;
+return 0;
+}

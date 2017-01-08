@@ -1,0 +1,4 @@
+-An abstract base class is a class with at least one pure virtual function
+-A special abstract base class is called interface and it is when all methods of an abstract base class are pure virtual.
+-Its purpose to enfroce design and make sure all classes of this type do what this type of class supposed to do.
+

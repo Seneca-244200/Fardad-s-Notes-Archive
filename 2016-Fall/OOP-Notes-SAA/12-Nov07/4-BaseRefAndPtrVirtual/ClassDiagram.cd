@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sict::Animal">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAAAAAAAAACAAAAAAAAIAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sict::Cat">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAQAAQAAACAAAAAAAAAAAAEAAAAAAAAAAAACAA=</HashCode>
+      <FileName>cat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
