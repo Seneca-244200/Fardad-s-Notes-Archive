@@ -1,0 +1,10 @@
+Type A; (type is something like int, double, char*, const char*)
+Faa B;
+
+A = Type(B);
+
+Faa::operator Type();
+
+
+
+

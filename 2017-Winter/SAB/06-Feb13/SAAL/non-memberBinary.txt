@@ -1,0 +1,13 @@
+Foo A;
+Faa B;
+Fee C;
+
+C =  A @ B
+
+Fee Foo::operator@(Faa )
+
+int a;
+
+C = a @ B;
+
+Fee operator@(int x, Faa whatever)

@@ -1,0 +1,31 @@
+All operators:
+binary
+RES =  A + B
+
+unary:
+-a
+!b
+--c
+C/C++ programming language has an additional unary:
+a--
+a++
+
+Member operators tempaltes:
+
+Foo A;
+Fee B;
+Faa C;
+
+Operator usage:
+C = A @ B
+C = A.operator@(B);
+
+Signature for implemetation: Faa(&) Foo::operator@([const]Fee[&] B);
+
+
+Operator usage:
+A = @B;
+A = B.operator@();
+
+Signature for implemetation: Foo[&] Fee::operator@();
+

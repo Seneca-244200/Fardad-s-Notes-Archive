@@ -1,0 +1,11 @@
+Foo A;
+Faa B;
+
+A = @B
+
+??? Faa::operator@();
+??? has something to do with a Foo!!!
+
+A = B@@;
+
+

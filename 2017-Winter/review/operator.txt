@@ -1,0 +1,55 @@
+A @ B;
+
+Foo A;
+Faa B;
+
+A + B;
+A = B;
+A - B;
+A += B;
+A << B;
+HHHHHHHHHEEEEEEEEEEEEEEEELLLLLLLLLLLPPPPPPPPPPPPPPPPPPPEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRSSSSSSSSSSSSSSSS
+type operator+ (Foo A,Faa B )
+///operator= (, ) // assignment overload can not be a helper, (it must be a member)
+type operator-(Foo A,Faa B )
+type& operator+=(Foo& A,const Faa& B ){
+   A.whatever(B);
+   return A;
+}
+type operator<< (Foo A,Faa B )
+
+Why reference?
+1 - we want to modify in the operator
+2 - object to big to pass by value ????? if we don't want it to be modified, we can make it a constant
+
+for the return type?
+1 - return value; when I don't want to return either A or B out, then you have to create a local object
+2 - return by reference;  when either of A or B is returned , 
+    must be const if we are not to modify it. in this case A or B are passed 
+    revcieved by reference
+MMMMMEEEEEEEEMMMMMMMMMMBBBBBBBEEEEEEEEEEEERRRRRRRRRRRRR
+
+FOO::operator+(Faa RO)
+FOO::operator=(Faa RO)
+FOO::operator-(Faa RO)
+FOO::operator+=(Faa RO)
+FOO::operator<<(Faa RO)  // not for overloading cout operator << 
+ 
+
+UUUUUUUUUNNNNNNNNNNNAAAAAAAAAARRRRRRRYYYYYYYYYYYYYY
+
+1: -A
+2: +B
+3: ++B;
+4: B++;
+
+
+type operator-(Foo A); // Helper, bad, very bad
+type Foo::operator-();
+
+2: type Faa:operator+();
+
+3: type Faa::operator++();
+
+4: type Faa::operator++(int);
+

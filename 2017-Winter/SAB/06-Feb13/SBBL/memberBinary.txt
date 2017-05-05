@@ -1,0 +1,25 @@
+Foo A;
+Faa B;
+
+A @ B
+
+Foo::operator@(Faa B)
+Foo::operator@(Faa& B)
+Foo::operator@(const Faa& B) // most usual
+Foo::operator@(const Faa& B)const // most usual
+
+
+Employee E;
+int a;
+double d;
+
+d = E += a;
+???? Employee::operator+=(int a)
+???? don't know but has something to do with double!!!!
+a = E - d;
+???? Employee::operator-(double d)const
+
+
+
+
+
