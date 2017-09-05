@@ -1,0 +1,105 @@
+Question Bank for Week 9
+
+You can cut and paste these code snippets into a text file, and run it...or you can just examine the code and answer questions by code inspection. 
+
+
+
+------------------------------
+Functions in a Hierarchy
+------------------------------
+
+// ex1.cpp
+#include <iostream>
+using namespace std;
+
+class Parent
+{
+public:
+    void display() { cout << "Parent"; }
+};
+
+class Child : public Parent
+{
+public:
+    void display() { cout << "Child"; }
+};
+
+int main()
+{
+    Parent p;
+    Child c;
+    
+    c.display();
+}
+
+
+Q1. Which display function gets called? Parent::display, or Child::display?
+Q2. What is the output?
+Q3. I now modify the classes to print names. What is the output?
+
+// ex2.cpp
+class Parent
+{
+   const char *name;
+public:
+    Parent(const char* p) 
+    {
+        name = p;
+    }
+      virtual void display() { cout << "Parent " << name; }
+};
+
+class Child : public Parent
+{
+    const char* name;
+public:
+    Child(const char* pName, const char* cName) : Parent(pName) {
+        name = cName;
+    };
+    void display() { 
+            cout << "Child " << name << " of ";
+            Parent::display();
+        }
+};
+
+
+int main()
+{
+    Child c("Trudeau", "Justin");
+    
+    c.display();
+    cout << endl;
+}
+
+Q4. If I create the Parent object how many constructors are called?
+Q5. If I create the Child object how many constructors are called?
+Q6. Which constructor is called first, Parent or Child? (Hint: can a child be born before it's parent? No!)
+Q7. In the example above, do I need a destructor for Parent or Child?
+Q8. Is the function call to c.display an example of early-binding or late-binding?
+
+------------------------------
+Virtual functions
+I now want to write a global helper function to handle both Parent and child. 
+
+// see ex3.cpp for the class definitions
+// ...
+void hello(Parent *X)
+{
+    cout << "Hello to ";
+    X->display();
+    cout << endl;
+}
+
+int main()
+{
+    Parent p("Trudeau");
+    Child c("Trudeau", "Justin");
+    
+    hello(&p);
+    hello(&c);
+}
+
+Q1. What is the output? 
+Q2. How can I make it print out Justin's name? (Hint: copying hello and overloading it to take a Child* is NOT a good solution!)
+Q3. What happens if I make Parent::display virtual?
+Q4. Do I need to declare Child::display as virtual too? What happens if I do?
