@@ -1,0 +1,92 @@
+ 
+ TypeA A;
+ TypeB B;
+ TypeC C;
+
+
+ Member Unary Operators
+ Prefix Unary Operator
+ @A  or  A.operator@();
+
+ -A    A.operator-()
+ +A    
+ !A
+ ~A
+ ++A   A.operator++();
+ --A
+
+ B = @A;
+
+ TypeB TypeA::operator@(){
+   TypeB whatever;
+   ....
+   return whatever;
+ } 
+
+
+ @A;
+ void TypeA::operator@(){
+     ....
+ }
+
+ postfix unary operator
+ C = B++;
+ TypeC TypeB::operator++(int){
+ }
+
+
+ B--;
+ void typeB::operator--(int){
+      whatever....;
+ }
+
+ TypeB X;
+ X = B++;
+ TypeB TypeB::operator++(int){
+    TypeB current = *this;
+    whatever;
+    return current;
+ }
+  
+
+Binary Operator 
+Member binary operator
+with sideeffect
+int k, i , j = 10;
+
+k = i += j;
+
+C = A @ B
+TypeC TypeA::operator@(TypeB rightOperand){
+   TypeC result;
+   *this is the left operand
+   return result;
+}
+
+without side effect
+TypeC TypeA::operator@(TypeB rightOperand)const{
+   TypeC result;
+   *this is the left operand
+   return result;
+}
+
+non-member binary operator
+helper binary operators
+
+
+A = B - C;
+
+overload Casting;
+
+Type i;
+
+i = Type(A);
+
+TypeA::operator Type(){
+}
+
+IO overloads
+
+cout << B << endl;
+
+ostream& operator<<(ostream& os,const TypeB& toBePrinted);

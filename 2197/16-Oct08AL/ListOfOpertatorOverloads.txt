@@ -1,0 +1,84 @@
+
+TypeA A;
+TypeB B;
+TypeC C;
+
+member operators
+prefix unary operator
+
+@A or A.operator@();
+!A or A.operator!();
+-A
++ A
+~A
+++A   A.operator++();
+--A
+how to implement:
+
+Type TypeA::operator@(){
+Type Whatever;
+return whatever;
+}
+
+postfix Unary operators:
+
+B++
+A--
+
+Type TypeB::operator++(int) {
+   Type whatever;
+   return whatever;
+}
+Type TypeA::operator--(int) {
+   Type whatever;
+   return whatever;
+}
+
+type cast overload:
+
+Type i = Type(A);
+
+TypeA::operator Type(){
+    Type whatever;
+    return whatever
+}
+
+Binary Operators:
+Binary member operators:
+Binary operators with side effect:
+int i, j;
+i += j;   
+
+Left operand must be a class owning oprator at
+
+C = A @ B;
+
+C = A.operator@(B);
+
+TypeC TypeA::operator@(TypeB RightOperand){
+   *this  is the left operand
+   TypeC whatever;
+   return whatever;
+}
+
+Binary operators without side effect:
+int i, j;
+i + j;   
+
+TypeC TypeA::operator@(TypeB RightOperand)const{
+   *this  is the left operand that should be read only
+   TypeC whatever;
+   return whatever;
+}
+
+Binary Helper operator
+
+C = A @ B;
+
+TypeC oprator(TypeA leftOperand, TypeB righOperand){
+   typeC Whatever;
+
+   return whatever;
+}
+
+

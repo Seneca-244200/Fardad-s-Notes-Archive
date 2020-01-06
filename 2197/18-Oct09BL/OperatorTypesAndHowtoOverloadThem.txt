@@ -1,0 +1,76 @@
+Operators:
+type t;
+TypeA A;
+TypeB B;
+TypeC C;
+
+
+Unary Operators:
+Prefix
+@ == any operator!
+
+@A or A.operator@();
+
++A  or A.operator+();
+~A
+!A
+++A
+
+type TypeA::operator@(){
+   type result
+   // do the logic
+   return result
+}
+TypeB TypeA::operator@(){
+   TypeB result
+   // do the logic
+   return result
+}
+
+TypeA TypeA::operator@(){
+   // logic
+   return *this;
+}
+
+postfix:
+
+
+A++;
+B--;
+
+
+TypeA TypeA::operator++(int){
+   TypeA Copy = *this;
+   // do the ++
+   return Copy;
+}
+
+Binary Member operators
+With side effect
+a = b += c;   (+= has side effect)
+
+A = B @ C;
+TypeA TypeB::operator@(TypeC rightOperand){
+   // *this is the left operand
+}
+
+Withoug side effect
+
+a = b + c;     (+ does not have side effect)
+
+
+TypeA TypeB::operator@(TypeC rightOperand)const{
+   // *this is the left operand
+}
+
+Non-memeber (helper) operator overload
+
+A = B @ C;
+
+TypeA operator@(TypeB leftOperand, TypeA rightOperand){
+}
+
+
+
+
+
