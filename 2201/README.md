@@ -19,4 +19,6 @@ Note: The Audio for Jan17 NAA section recording was not recorded so the video is
 [Mar 30th](https://recordings.rna2.blindsidenetworks.com/senecacollege/8aea63989b7b54aefaeaf54d339f79238512c155-1585579008516/capture/) <br />
 [Apr 06th](https://recordings.rna2.blindsidenetworks.com/senecacollege/8aea63989b7b54aefaeaf54d339f79238512c155-1586183495685/capture/) <br />
 [Apr 13th](https://recordings.rna2.blindsidenetworks.com/senecacollege/8aea63989b7b54aefaeaf54d339f79238512c155-1586788683457/capture/) <br />
-
+## Questions? 
+If you have any questions contact me on [Microsoft teams](https://www.microsoft.com/en-ca/microsoft-365/microsoft-teams/download-app)<br />
+Login to [Microsoft teams](https://www.microsoft.com/en-ca/microsoft-365/microsoft-teams/download-app) using your Seneca userid and password and search for "Fardad Soleimanloo".
