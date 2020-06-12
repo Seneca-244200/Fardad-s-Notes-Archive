@@ -1,3 +1,2 @@
-# Testing
-**This is a repostory**
-to hold old notes from previous semesters of OOP244
+# OOP244 old notes archive (Fardad's notes)
+These are old notes from previous semesters of OOP244 taught by Fardad @ seneca
