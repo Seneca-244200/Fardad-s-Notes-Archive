@@ -1,0 +1,5 @@
+1- sub-initialization <- first  // not right now
+2- initialization <- second  // not right now
+3- Construction <= third  // today
+4- birth and life of the object <-- where business logic happens (i.e your program)
+5- Destruction <- last thing before death of an object // today

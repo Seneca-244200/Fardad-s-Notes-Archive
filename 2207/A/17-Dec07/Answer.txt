@@ -1,0 +1,38 @@
+130: function call
+123: A passed by value, Copy Constrctr. of E
+76: assing oper. called 
+79: setname called with roper.name Cstring "Fred"
+67: m_name is deleted
+68: new mem allocated lenght of "Fred" + 1 = 5
+//
+67 to 68 DMA, for Len of Fred + 1 in m_name
+//
+69: Fred is copied into m_name
+80: m_empno is copied
+81: "Assign to is printed
+81: operator<<(cout, Roper)
+107: Write of Roper is called
+103: "Fred......................... (12345)
+103: ostr is returned
+107: ostr is returned 
+81: newline is printed
+82: returns Roper by ref
+76: exit copy const.
+124: "The employe info are : " and newline
+125: operator << (cout, Roper)
+81: operator<<(cout, Roper)
+107: Write of Roper is called
+103: "Fred......................... (12345)
+103: ostr is returned
+107: ostr is returned 
+125: new line is printed
+126: destructor of E is called in print
+89: printing "Deleting " 
+89: operator<<(cout, *this)
+107: Write of *this is called
+103: "Fred......................... (12345)
+81: newline is printed
+103: ostr is returned
+107: ostr is returned 
+90: m_name's memeory is freed
+130: print ends

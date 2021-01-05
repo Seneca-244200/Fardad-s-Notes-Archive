@@ -1,0 +1,17 @@
+#ifndef SDDS_ANIMAL_H__
+#define SDDS_ANIMAL_H__
+namespace sdds {
+   class Animal {
+      char m_name[41];
+   protected:
+      const char* name()const;
+   public:
+      Animal(const char* name = "Nameless");
+      void name(const char* value);
+      void act();
+      void move();
+      void sound();
+      ~Animal();
+   };
+}
+#endif

@@ -1,0 +1,1 @@
+![animalClasses](images/animalClasses.png)

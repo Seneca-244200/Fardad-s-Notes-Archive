@@ -1,0 +1,40 @@
+A)
+125: func call print, passing A by value.
+119: copy const call for E
+75: operator= call passing ref A
+78: setname call passing "Fred" Cstring
+67: deleting nullptr in m_name
+68: DMA len of "Fred" + 1 pointed by m_name
+69: copying "Fred" into m_name
+70: exit setname
+79: copying 12345 into m_empno
+80: return *this by ref (exit operator=)
+76: exit copy const
+120: print "The Employee info: " & newline
+121: call operator<<(ostream cout, Employee E)
+103: call write of E passing cout
+99: print "Fred..................... (12345)"
+99: return cout (exit operator<<)
+121: print newline
+122: destructor of E is called
+86: free the memory of m_name in E
+87: exit destructor
+122: exit print
+
+B)
+The Employee info: 
+Fred..................... (12345)
+
+C)
+m_name DMA holding Fred
+m_emplo holding 12345
+
+D)
+either: 
+cout << "Enter Employee info:" << endl;
+cin >> A;
+OR:
+getEmployee(A);
+
+
+
