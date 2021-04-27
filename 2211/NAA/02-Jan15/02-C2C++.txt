@@ -1,0 +1,10 @@
+struct Person {
+   char name[20];
+   int age;
+};
+
+
+
+struct Student : Person {
+   int stdno;
+};

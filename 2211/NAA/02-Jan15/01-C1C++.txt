@@ -1,0 +1,33 @@
+struct Student{
+   char name[40];
+   float gpa;
+};
+
+void display(struct Student S) {
+   print S.name;
+   print S.gpa;
+}
+
+struct Student {
+   char name[40];
+   float gpa;
+   void display() {
+      print name;
+      print gpa;
+   }
+};
+
+
+
+int main() {
+   Student Cstd;
+   Student CPPstd;
+
+   display(Cstd);  // C no oop
+
+   CPPstd.display();  // C++ student knows how to print itself
+
+
+}
+
+

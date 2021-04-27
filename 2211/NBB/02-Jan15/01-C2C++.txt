@@ -1,0 +1,36 @@
+struct Student {
+   char name[25];
+   int stNo;
+};
+
+
+void display(struct Student* std) {
+   print std->name;
+   print std->stNo;
+}
+
+struct Student {
+   char name[25];
+   int stNo;
+   void display() {
+      print name;
+      print stNo;
+   }
+};
+
+struct Warrior {
+   double strng;
+   void fight() {
+
+   }
+};
+
+int main() {
+   Student Cstd;
+   display(&Cstd); // C way of displaying
+
+   Student CPPstd;  // CPP 
+   CPPstd.display();
+
+
+}
