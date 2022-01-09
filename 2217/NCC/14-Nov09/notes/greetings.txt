@@ -1,0 +1,10 @@
+Persian: Dorood
+Punjabi: Sat Shri Akal
+Somali: Iska waran
+: Assalamualaikum
+Russian: Privet
+Hindi: Namaste
+French: Bonjoour
+English: Hello
+Spanish: Buenos Dias
+Gujarati: kem cho

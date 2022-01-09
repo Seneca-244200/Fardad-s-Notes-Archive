@@ -1,0 +1,33 @@
+Creating Pepper the Animal
+Creating Pepper the Cat with 9 lives
+Creating Fluffy the Animal
+Creating Fluffy the Cat with 9 lives
+Creating Tom the Animal
+Creating Tom the Cat with 9 lives
+------------Using Cat ref:
+Act playful, Pepper the Cat
+Move like Pepper the Cat
+Sound like Pepper the  animal
+Meow!
+------------Using cat pointer:
+Act playful, Fluffy the Cat
+Move like Fluffy the Cat
+Sound like Fluffy the  animal
+Meow!
+------------Using Animal reference:
+Act playful, Pepper the Cat
+Move like Pepper the  animal
+Sound like Pepper the  animal
+Meow!
+------------Using Animal pointer:
+Act playful, Tom the Cat
+Move like Tom the  animal
+Sound like Tom the  animal
+Meow!
+Removing Fluffy the Cat
+Removing Fluffy the animal
+Removing Tom the Cat
+Removing Tom the animal
+------------End of main
+Removing Pepper the Cat
+Removing Pepper the animal
