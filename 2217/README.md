@@ -117,7 +117,7 @@ Here are the timestamps for the main topics covered: (Thank you **Chung On Tse**
 - 4:45:00 string library, string.h
 - 4:51:00 2 Dim. arrays
 ### Review Session Codes
-[144/100 for 244/200 Session Notes](https://github.com/Seneca-244200/OOP244NABC-Notes/tree/main/144For244Review)
+[144/100 for 244/200 Session Notes](https://github.com/Seneca-244200/OOP-Notes-Archive/tree/master/2217/144For244Review)
 
 
 # Computer preparation and Getting Workshop files
