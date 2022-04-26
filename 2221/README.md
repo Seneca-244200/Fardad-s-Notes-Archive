@@ -1,14 +1,9 @@
 # OOP244 NAA and NBB Notes
 
 
-## Active Session 
-You are welcome to Fardad's classes as a guest by **using your real Seneca Name** (what is on your student card, otherwise you will be kicked out).
 
-### Final Test Overview
-Click on the link below to join: (See [my schedule](#fardads-schedule) for lecture times)<br />
-[OOP244NAA and NBB Final test Overview](https://connect.rna2.blindsidenetworks.com/invite/to?c=pHTlHsH-JP1MQ5HXzw4f04kfvY6uXWzCPKaA8JJDjss&m=60a5fa80b6304825cc66a3f45a5b7e8ff17a243b&t=1649942749427&u=senecacollege)
 ## Recordings of Previous Sessions
-[Sample codes done in class](https://github.com/Seneca-244200/OOP244-NAA-and-NBB-Notes/tree/main/144100Review)
+[144100 Review sample codes done in class](https://github.com/Seneca-244200/OOP-Notes-Archive/tree/master/2221/144100Review)
 ### NAA
 - [Jan 14 - Object Oriented Design, namespaces, Modules](https://recordings.rna2.blindsidenetworks.com/senecacollege/31dd7d7b3ac5e54b8056a006ad1585c1ff02b256-1642164124612/capture/)
 - [Jan 18 - Week 2 Types](https://recordings.rna2.blindsidenetworks.com/senecacollege/c9d02c6576f1b069b3808f382dd6a460c71a8483-1642520393828/capture/)
