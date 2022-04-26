@@ -1,0 +1,106 @@
+int a = 10, b = 20;
+int c;
+a + b
+cout << a
+c = a + b;
+a += b
+a /= b
+!a  !->operator   a-> operand!!!
+this->value  
+-b
+a = -b;
+a++;
+a = b
+
+C++ operators can be overloaded in two different ways:
+(if possible do this first)
+As a Method: (member function) 
+   binary operators: left operand is the owner of the method
+                     right operand is the argument of the operator function (one arg only)
+
+      Foo A; Faa B; Fee C;
+      B += C;
+      void Faa::operator+=(Fee C);
+      A = B += C;
+      Foo Faa::operator+=(Fee C); // left side effect
+      Foo& Faa::operator+=(const Fee& C); // << the perfect one, since this is += is before overload
+      Foo Faa::operator+=(const Fee& C); // << the perfect one, since this is += is before overload
+      Foo Faa::operator+=(Fee C)const;  // no side effect
+      Foo Faa::operator+=(Fee& C); // side effect on both
+      A = B + C;
+      Foo Faa::operator+(Fee C); // left side effect
+      Foo& Faa::operator+(const Fee& C); 
+      Foo Faa::operator+(const Fee& C)const;  // perfect one for + because "+" works like this before overload
+      Foo Faa::operator+(Fee& C); // side effect on both
+   
+   special overloads:
+      index operator:
+      Foo A; Faa B; Fee n;
+      A = B[n];
+      Foo Faa::operator[](Fee n);
+      Foo Faa::operator[](Fee n)const;
+      cont Foo& Faa::operator[](Fee n);
+
+   Unary operators: 
+      Prefix: - the operand (at right) is the owner
+         Foo A; Faa B;
+         A = !B;
+         Foo Faa::operator!();
+         Foo& Faa::operator!();
+         Foo Faa::operator!()const;
+         Foo& Faa::operator!()const;
+         ++A;
+         void Foo::operator++();
+         ~A; // let say operator~ is to print A
+         void Foo::operator~()const;
+      Postfix: 
+         Foo A; Faa B;
+         A = B++;
+         Foo Faa::operator++(int); // the int is not an argument, but only a flag to indicate
+                                   // this is a post fix operator overload
+         A--;
+         void Foo::operator--(int);
+
+As Helper functions:
+   Binary: (everything except operator=)
+      operator overloads are stand alone functions with no owners:
+      Return value is what the operator generates, 
+      left argumnet is left operand
+      righ argument is right operand
+         Foo A; Faa B; Fee C;
+         A = B + C;
+         Foo operator+(Faa B, Fee C);
+         Foo operator+(const Faa& B, const Fee& C); << the perfect one
+         Foo& operator+(Faa B, Fee C);
+   Unary:
+      prefix:
+         operator overloads are stand alone functions with no owners:
+         the argumnet is the right operand
+            Foo A; Faa B;
+            A = !B;
+            Foo operator!(Faa B); // no side effect
+            Foo operator!(Faa& B);  // side effect
+            Foo operator!(const Faa& B); // efficient with no side effect
+      postfix:
+         operator overloads are stand alone functions with no owners:
+         left argumnet is the left operand,
+         right argument is only a flag (int)
+            Foo A; Faa B;
+            A = B++;
+            Foo operator++(Faa B, int);
+
+
+Type conversion overload (casting overload)
+   Foo B;
+   Faa C;
+   Type a = (Type)B;
+   Mark M;
+   conversion overload is a member of the oprand
+   Foo::operator Type();
+   Foo::operator Type()const;  << this is the perfect;
+   const char* s = (const char*)M;
+   Mark::operator const char*()const{ // const makes sure Mark is not change as a result of this cast
+      const char* whatever;
+      // do something
+      return  whatever;
+   }

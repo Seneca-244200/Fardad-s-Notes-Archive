@@ -1,0 +1,23 @@
+int a = 10, b = 20;
+int c;
+
+a + b
+
+cout << a
+
+c = a + b;
+
+a += b
+
+a /= b
+
+!a  !->operator   a-> operand!!!
+
+this->value  
+
+-b
+a = -b;
+
+a++;
+
+a = b

@@ -1,0 +1,38 @@
+Ad-hoc   (fake) when you look closer, you see behind the scene the ploymorphism disapears
+   a - Coercion  
+   b - Overloading
+Universal (real)
+   c - inclusion
+   d - parametric
+int a;
+double d, e;
+
+d = a + e;
+
+double sum(double a, double b);        sum_double_double
+int sum(int a, int b);                 sum_int_int
+
+
+class mark{
+   public:
+      virtual void display()const;
+};
+
+class testMark: public mark{
+   public:
+      void display()const;
+}
+
+mark* p = new mark();
+
+
+p->display(); // latest verion(mark)
+
+
+mark* q = new testMark();
+
+
+
+q->display(); // latest verion(testMark)
+
+

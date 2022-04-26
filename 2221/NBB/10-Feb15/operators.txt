@@ -1,0 +1,87 @@
+// todo, convert this to an md file.
+A + B;
+
+A = B;
+
+!A;  // prefix
+
+-C;  // prefix
+
+A - C;
+
+A += C;
+
+A = (B += c);
+
+++C; // unary, prefix with side effect
+
+C--; // unary operator, post fix with side effect
+
+A = (++C);
+A Bin (un C);
+
+All opatators can be overlaoded in two different ways:
+
+As a method  // which means member functions
+             // bin: left operand is the owner of the method
+             //      and the right operand is the argument of the method
+Binary:
+Foo A; Faa B; Fee C;
+C = A += B;
+Fee Foo::operator+=(Faa B);
+Fee& Foo::operator+=(const Faa& B);
+Fee Foo::operator+=(Faa& B);
+Fee Foo::operator+=(Faa B)const;  // does not have side effect
+and more....
+
+             // unary: the operand is the owner of the method
+Foo A; Faa B;
+A = !B;
+Foo Faa::operator!();      // with side effect
+Foo& Faa::operator!()const;  // without side effect
+A = ++B
+Foo Faa::operator++();     // with side effect
+Foo Faa::operator++()const;     // without side effect
+
+A = B++;
+Foo Faa::operator++(int);     // with side effect
+                             // int is just to flag this
+                             // overload to be post fix 
+                             // and it does not mean integer
+Foo Faa::operator++(int)const;     // without side effect
+                             // int is just to flag this
+                             // overload to be post fix 
+                             // and it does not mean integer
+
+
+As a helper function // a stand alone function receiving 
+                     // the class envolved as an argumen
+Note: Assignment Operator can ONLY BE A METHOD and not a helper
+
+Binary:
+Foo A; Faa B; Fee C;
+C = A += B;
+Fee operator+=(Foo leftOp, Faa rightOp);
+Fee& operator+=(const Foo& leftOp, Faa rightOp);
+Fee operator+=(const Foo& leftOp, cosnt Faa& rightOp); // does not have side effect
+any many more
+
+Foo A; Faa B;
+A = !B;
+Foo operator!(Faa B);      // without side effect
+Foo operator!(Faa& B);      // with side effect
+Foo& operator!(const Faa& B);  // without side effect
+
+A = ++B;
+Foo operator++(Faa B);      // without side effect
+Foo operator++(Faa& B);      // with side effect
+Foo& operator++(const Faa& B);  // without side effect
+
+A = B++;
+Foo operator++(Faa B, int);      // without side effect
+Foo operator++(Faa& B, int);      // with side effect
+Foo& operator++(const Faa& B, int);  // without side effect
+                             // int is just to flag this
+                             // overload to be post fix 
+                             // and it does not mean integer
+
