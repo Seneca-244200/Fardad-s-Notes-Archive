@@ -1,9 +1,0 @@
-Foo A;
- 
-@A
-
-
-???? Foo::operator@();
-
-A@@
-
