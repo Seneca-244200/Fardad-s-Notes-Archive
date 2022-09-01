@@ -1,0 +1,239 @@
+/* style.043.css */
+/* Base Style Sheet */
+
+/* Default font-family is set for printing */
+
+/* General */
+
+body    { 
+    background: #FFFFFF; 
+    margin-top: 0; 
+    margin-left: 0;
+}
+img     { 
+    vertical-align: bottom; 
+    border: 0;
+    margin-left:auto;
+    margin-right:auto;
+}
+p   { 
+    font-family: "Times New Roman", serif; 
+    font-size: small;
+}
+code {
+    color: navy; 
+    font-weight: bold; 
+    vertical-align: baseline;
+}
+p.center {
+    text-align: center
+}    
+table   { 
+    border: 0; 
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+tr.banner {
+    height:120px
+}
+tr.navigate {
+    height:20px
+}   
+tr.content {
+    height:600px
+}    
+td  { 
+    font-family: "Times New Roman", serif; 
+    font-size: small;
+}
+td.tbody {
+    background: #ffffff
+}    
+td.content {
+    background: #ffffff
+}
+td.banner {
+    width: 250px
+}
+td.right {
+    width: 150px
+}
+td.title {
+    background: #ebeffd
+}
+td.assess {
+    background: #fdfbb7
+}
+td.half {
+    width:50%
+}
+td.w15 {
+    width:15%
+}
+td.w20 {
+    width:20%
+}
+td.lateral {
+    width:700px
+}
+td.w33 {
+    width:33%
+}
+td.w150 {
+    width:150px
+}
+div.center {
+    text-align: center
+}    
+ul, li  { 
+    font-family: "Times New Roman", serif; 
+    font-size: small;
+}
+ul.center {
+    text-align:center
+}    
+pre { 
+    font-family: "Courier New", serif; 
+    font-size: small; 
+    margin-left: 15px; 
+    font-weight: bold; 
+    color: navy; 
+    background: #ffffe0;
+}
+.tbody  { 
+    background: #FFFFFF; 
+    width: 700px;
+}
+.text3  { 
+    font-family: "Times New Roman", serif; 
+    font-size: small;
+}
+.panel1 { 
+    background: #AEE7FC;
+}
+
+/* Chapter Headings */
+
+.texthead { 
+    font-family: "Times New Roman", serif; 
+    font-size: x-large; 
+    font-weight: bold; 
+    color: red;
+}
+.texth  { 
+    font-family: "Times New Roman", serif; 
+    font-size: medium; 
+    font-weight: bold; 
+    color: #4599B1;
+}
+.quote  { 
+    font-family: "Times New Roman", serif; 
+    font-size: small; 
+    font-style: italic;
+}
+.textagend { 
+    font-family: "Times New Roman", serif; 
+    font-size: small; 
+    color: red;
+}
+.section { 
+    font-family: "Times New Roman", serif; 
+    font-size: medium; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    color: #4599B1;
+}
+.ssection { 
+    font-family: "Times New Roman", serif; 
+    font-size: medium; 
+    font-weight: bold; 
+    color: #4599B1;
+}
+.sssection { 
+    font-family: "Times New Roman", serif; 
+    font-size: small; 
+    font-weight: bold; 
+    color: #4599B1;
+}
+.top    { 
+    vertical-align: top;
+}
+.tup    { 
+    vertical-align: top; 
+    color: blue;
+}
+.defin  { 
+    font-family: "Courier New", serif; 
+    font-size: small; 
+    color: maroon; 
+    font-weight: bold; 
+    background: #ffffff;
+}
+
+/* Highlighting Table Rows */
+
+.desc   { 
+    background: #EDEDFE; 
+    text-align: center;
+}
+.value  { 
+    background: #FFFFC6; 
+    text-align: center;
+}
+.addre  { 
+    background: #AEE7FC; 
+    text-align: left;
+}
+.addrec { 
+    background: #AEE7FC; 
+    text-align: center;
+}
+.oper   { 
+    color: maroon; 
+    font-style: italic;
+}
+
+/* Highlighting Embedded Code */
+
+.code   { 
+    font-family: "Courier New", serif; 
+    font-size: small; 
+    color: navy; 
+    font-weight: bold; 
+    vertical-align: baseline;
+}
+
+/* Highlighting Text */
+
+.high   { 
+    color: maroon;
+}
+
+.low    { 
+    color: #66CCFF;
+}
+
+.grey    { 
+    color: maroon;
+    font-style: italic;
+}
+
+.darkgrey    { 
+    color: #999999;
+}
+
+/* Highlighting Code Blocks */
+
+.result { 
+    background: #F7FFCE;
+}
+.error  { 
+    background: #FFE7C6;
+}
+.white  {
+    background: #FFFFFF;
+}
+    
+

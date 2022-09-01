@@ -1,0 +1,31 @@
+Binary Operators
+leftOperand @ rightOperand
+A += B  // B remains the Same but A changes
+        // operators with side-effect
+
+A = A + B;
+
+foo(A+=B);
+C - D  // C and D remain the same!
+
+foo(C - D);
+
+2 * 4
+
+cout << "Hello!"
+display(cout << "Hello!");
+
+Unary operatos (prefix)
+@ operand 
+-2
+foo(-2)
++b
+!A
+++i
+foo(++i);
+
+// only in C and C++
+
+operand @ (postfix)
+j++
+x--

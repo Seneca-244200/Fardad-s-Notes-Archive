@@ -1,0 +1,42 @@
+1) a shallow version, if you look closer the polymorphism will pale  -> Ad-hoc
+
+  a) Coercion
+ 
+  int a;
+  double b, c;
+  int d;
+  c = a + b; Not really adding an integer to a double -> converting int to double and then adding double to double
+  c = a + d;
+  c = b + c;  
+
+  b) overloading
+  double sum(double a, double b); -> sum_double
+  int    sum(int a   ,int b    ); -> sum_int 
+  int    sum(double a, double b); -> sum_idouble
+
+2) deep version of polymorphism , it is really really doing ONE ACTION in different ways
+
+  a) parametric -> templates
+
+  b) inclusion
+
+ex: virtual functions
+
+class Car{
+public: 
+ virtual void display() const;
+};
+
+calss EV:public Car {
+public:
+virtual void display()const;
+
+};
+
+Car* c= new Car();
+c->display();
+
+Car* d =new EV();
+d->display();
+
+  

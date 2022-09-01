@@ -1,0 +1,1113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0061)https://ict.senecacollege.ca/~oop244/pages/content/nonme.html -->
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="generator" content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+
+ <title>Encapsulation | Helper Functions</title>
+ 
+ <meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.icra.org/ratingsv02.html&quot; l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true r (n 0 s 0 v 0 l 0) &quot;http://www.classify.org/safesurf/&quot; l gen true r (SS~~000 1))">
+ <meta name="Copyright" content="(c) Copyright Chris Szalwinski and Seneca College 2016">
+ <meta name="Description" content="Welcome to the ICT Programming Stream C++ Web Site. On this site you can find the introductory course to object-oriented programming. Designed by Chris Szalwinski.">
+ <meta name="Abstract" content="This subject introduces the principles of object-oriented programming. Students study the solution of problems using objects with the C++ programming language. The emphasis throughout is on the solution of small problems.">
+ <meta name="Author" content="chris.szalwinski@senecacollege.ca">
+ <meta name="Keywords" content="software development, object-oriented programming, lecture notes">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Helper Functions_files/style.043.css">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Helper Functions_files/styleScreen.043.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Helper Functions_files/styleSPrint.043.css" media="print">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Helper Functions_files/styleNav.043.css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1060.0" data-gr-ext-installed="">
+ <table id="top" width="850" cellspacing="0" cellpadding="0" summary="body">
+  <!-- Banner -->
+
+  <tbody><tr class="banner">
+   <td colspan="2" class="banner">
+    <table cellspacing="0" cellpadding="0" summary="banner">
+     <tbody><tr>
+      <td class="w250 banner">
+       <div class="center">
+        <span class="text0">&nbsp;&nbsp;Software&nbsp;&nbsp;
+        <br>
+        &nbsp;&nbsp;Development&nbsp;&nbsp;</span>
+       </div>
+      </td>
+
+      <td class="tbanner"><img src="./Encapsulation _ Helper Functions_files/Banner4.gif" height="120" width="500" alt="Software Development"></td>
+     </tr>
+    </tbody></table>
+   </td>
+  </tr><!-- Navigation Bar -->
+
+  <tr class="navigate">
+   <td class="panel1" align="left" valign="bottom">
+    <ul id="tabnav">
+     <li><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/ict.js.download"></script><a href="https://ict.senecac.on.ca/">ICT</a></li>
+
+
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/index.html">Home</a></li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/outline.js.download"></script><a href="http://www.senecacollege.ca/ssos/findwithoutsemester/oop244/sict">Outline</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/timeline.html">Timeline</a></li>
+
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/index.html">Notes</a></li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Helper Functions_files/classroom_a.js.download">
+</script><a href="https://scs.senecac.on.ca/~ipc144/pages/content/index.html">IPC Notes</a>
+     </li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Helper Functions_files/classroom_b.js.download">
+</script><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a>
+     </li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/workshops.js.download"></script><a href="https://ict.senecacollege.ca/~oop244/dynamic/workshops/index.html">Workshops</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/assignments/index.html">Assignments</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/instructors/index.html">Instructor</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme_p.html"><img src="./Encapsulation _ Helper Functions_files/Printer.gif" height="15" width="10" alt="Printer Friendly Version of this Page"></a></li>
+    </ul>
+   </td><!-- Web Site Title -->
+
+   <td class="panel2 w150" align="center"><span class="text1"><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/subject.js.download">
+</script>OOP244</span></td>
+  </tr><!-- Body Cells -->
+
+  <tr class="content">
+   <!-- Content Area -->
+
+   <td class="tbody" valign="top">
+    <table cellpadding="10" width="100%" summary="content">
+     <tbody><tr>
+      <td class="content" valign="top">
+       <br>
+
+       <div class="center">
+        <span class="texth">Part C - Encapsulation</span>
+        <br>
+        <br>
+        <span class="texthead">Helper Functions</span>
+        <br>
+        <br>
+        <span class="textagend">Support a class definition with global function definitions
+        <br>
+        Describe the syntax for overloading operators that support a class
+        <br>
+        Grant a global function access to the private members of a class</span>
+
+        <p class="quote">"Avoid membership fees: Where possible, prefer making
+        functions nonmember non-friends" <br>(Sutter, Alexandrescu, 2005)</p>
+        <span class="textagend">
+        <a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html#sym">Free</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html#hel">Operators</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html#fri">Friends</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html#sum">Summary</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html#exe">Exercise</a>
+        </span>
+       </div>
+       <br>
+       <br>
+
+       <p>
+       In object-oriented programming, not all instructions that support a class need to be
+       included in the class definition.&nbsp;  A well-encapsulated class can accept external
+       support in the form of global functions containing additional logic.&nbsp; We call these
+       functions <i>helper functions</i>.&nbsp; Helper functions access the objects of a class
+       solely through their parameters, all of which are explicit.&nbsp; A typical helper
+       function includes at least one parameter of the class type that it supports.&nbsp;</p>
+
+       <p>
+       This chapter describes the definition of helper functions, including helper
+       operators, and discusses the granting of privileged access to
+       the private members of a class.&nbsp;
+       </p>
+
+       <br>
+
+       <p id="sym" class="section">Free Helpers</p>
+
+       <p>
+       A free or loosely coupled helper function is a function that obtains all of its information
+       from the public member functions of the class that it supports.&nbsp; A free helper function
+       does not require access to the private members of its class.&nbsp;
+       The coupling between a free helper function and its class is minimal, which
+       is an ideal design solution.&nbsp;
+       </p>
+
+       <p class="ssection">Comparison</p>
+
+       <p>
+       Consider a helper function that compares two objects of the same class.&nbsp; The function
+       returns <span class="code">true</span> if the objects have the same data values and
+       <span class="code">false</span> if they differ.&nbsp;
+       </p>
+
+       <p class="sssection">Example</p>
+
+       <p>
+       Let us add three queries (<span class="code">getStudentNo()</span>, <span class="code">getNoGrades()</span>
+       and <span class="code">getGrade()</span>) to our <span class="code">Student</span> class definition and
+       a helper function named <span class="code">areIdentical()</span> as support.&nbsp; For
+       conciseness, let us assume that all grades are stored in static memory.&nbsp; We insert
+       the prototype for our helper function into the header file <i>after</i> the class definition:</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.h
+
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+ public:
+     Student();
+     Student(int);
+     Student(int, const float*, int);
+     void display() const;
+     <span class="high">int getStudentNo() const { return no; }
+     int getNoGrades() const { return ng; }
+     float getGrade(int i) const { return i &lt; ng ? grade[i] : 0.0f; } </span>
+ };
+
+ <span class="high">bool areIdentical(const Student&amp;, const Student&amp;);</span>&nbsp;
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       The implementation file contains the definition of our helper function.&nbsp;
+       </p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ #include "Student.h"
+
+ Student::Student() {
+     no = 0;
+     ng = 0;
+ }
+
+ Student::Student(int n) {
+     *this = Student(n, nullptr, 0);
+ }
+
+ Student::Student(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         *this = Student();
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ <span class="high">bool areIdentical(const Student&amp; lhs, const Student&amp; rhs) {&nbsp;
+     bool same = lhs.getStudentNo() == rhs.getStudentNo() &amp;&amp;
+      lhs.getNoGrades() == rhs.getNoGrades();
+     for (int i = 0; i &lt; lhs.getNoGrades() &amp;&amp; same; i++)
+         same = lhs.getGrade(i) == rhs.getGrade(i);
+     return same;
+ }</span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       The following client code compares the two objects:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Compare Objects
+ // compare.cpp
+
+ #include &lt;iostream&gt;
+ #include "Student.h"
+ using namespace std;
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3), harry_(1234, gh, 3);
+     if (<span class="high">areIdentical(harry, harry_)</span>)
+         cout &lt;&lt; "are identical" &lt;&lt; endl;
+     else
+         cout &lt;&lt; "are different" &lt;&lt; endl;
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+ are identical&nbsp;
+
+
+
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="sssection">The Cost of Upgrading Freedom</p>
+
+       <p>
+       Free helper functions use public queries to access information that is otherwise
+       inaccessible.&nbsp; If we add a data member to the class, we may also need to add
+       a query to access its value.&nbsp; As we add data members, the class definition grows
+       with new queries.&nbsp; We call this growth <i>class bloat</i>.&nbsp;
+       </p>
+       <p>
+       One alternative to class bloat that admits upgradability is friendship (see below).</p>
+
+       <br>
+
+       <p id="hel" class="section">Helper Operators</p>
+
+       <p>
+       Helper operators are global functions that overload operators.&nbsp;
+       Candidates for helper operators are operators that do not change
+       the values of their operands as shown in the table below.
+       </p>
+       <table align="center" border="1" cellpadding="3">
+       <tbody><tr class="desc">
+       <td>Effect on Operand(s)</td>
+       <td align="center">Candidate</td>
+       <td>Operands</td>
+       <td>Operator</td>
+       </tr>
+       <tr>
+       <td rowspan="2">Left Operand Changes</td>
+       <td align="center" rowspan="2">Member</td>
+       <td align="center">0</td>
+       <td class="code">++ -- - + ! &amp; * </td>
+       </tr>
+       <tr>
+       <td align="center">1</td>
+       <td class="code">= += -= *= /= %=</td>
+       </tr>
+       <tr class="value">
+       <td>Neither Operand Changes</td>
+       <td align="center">Helper</td>
+       <td align="center">2</td>
+       <td class="code">+ - * / % == != &gt;= &lt;= &gt; &lt; &lt;&lt; &gt;&gt;</td>
+       </tr>
+       </tbody></table>
+
+       <p class="ssection">Identity Comparison</p>
+
+       <p>
+       To improve readability, let us replace the
+       <span class="code">areIdentical()</span> function defined above
+       with an overloaded <span class="code">==</span> operator that
+       takes two <span class="code">Student</span> operands.&nbsp;
+       The header file for the <span class="code">Student</span>
+       class now contains:&nbsp;</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.h
+
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+ public:
+     Student();
+     Student(int);
+     Student(int, const float*, int);
+     void display() const;
+     int getStudentNo() const { return no; }
+     int getNoGrades() const { return ng; }
+     float getGrade(int i) const { return i &lt; ng ? grade[i] : 0.0f; }&nbsp;
+ };
+
+ bool <span class="high">operator==</span>(const Student&amp;, const Student&amp;);&nbsp;
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       The implementation file contains defines this helper operator:</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> bool <span class="high">operator==</span>(const Student&amp; lhs, const Student&amp; rhs) {
+     bool same = lhs.getStudentNo() == rhs.getStudentNo() &amp;&amp;&nbsp;
+      lhs.getNoGrades() == rhs.getNoGrades();
+     for (int i = 0; i &lt; lhs.getNoGrades() &amp;&amp; same; i++)
+         same = lhs.getGrade(i) == rhs.getGrade(i);
+     return same;
+ }
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       The following client code compares the two objects:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Compare Objects
+ // compare.cpp
+
+ #include &lt;iostream&gt;
+ #include "Student.h"
+ using namespace std;
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3), harry_(1234, gh, 3);
+     if (<span class="high">harry == harry_</span>)
+         cout &lt;&lt; "are identical" &lt;&lt; endl;
+     else
+         cout &lt;&lt; "are different" &lt;&lt; endl;
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+ are identical&nbsp;
+
+
+
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">Addition</p>
+
+       <p>
+       Consider an expression that adds a single grade to a <span class="code">Student</span>
+       object and evaluates to a copy of the updated object.&nbsp; To implement this operation,
+       let us overload the <span class="code">+</span> operator for a <span class="code">Student</span>
+       object as the left operand and a <span class="code">float</span> as the right operand.&nbsp;
+       </p>
+       <p>
+       As part of the class definition, we include the <span class="code">+=</span> operator
+       described in the preceding chapter on <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#bin">Member Operators</a>.&nbsp;
+       The header file for the <span class="code">Student</span> class now contains:&nbsp;</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.h
+
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+ public:
+     Student();
+     Student(int);
+     Student(int, const float*, int);
+     <span class="high">const Student&amp; operator+=(float);</span>
+     void display() const;
+     int getStudentNo() const { return no; }
+     int getNoGrades() const { return ng; }
+     float getGrade(int i) const { return i &lt; ng ? grade[i] : 0.0f; }&nbsp;
+ };
+
+ bool operator==(const Student&amp;, const Student&amp;);&nbsp;
+ <span class="high">Student operator+(const Student&amp;, float);</span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       We maintain loose coupling by initializing a new <span class="code">Student</span>
+       object to the left operand and calling the <span class="code">+=</span> member
+       operator on that object to add the single grade:
+       </p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> <span class="high">Student operator+(const Student&amp; s, float grade) {
+     Student copy = s; // makes a copy
+     copy += grade;    // calls the += operator on copy&nbsp;
+     return copy;      // return updated copy
+ }</span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       For symmetry, we overload the addition operator for identical operand types
+       but in reverse order.&nbsp; The complete header file contains:</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.h
+
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+ public:
+     Student();
+     Student(int);
+     Student(int, const float*, int);
+     const Student&amp; operator+=(float);
+     void display() const;
+     int getStudentNo() const { return no; }
+     int getNoGrades() const { return ng; }
+     float getGrade(int i) const { return i &lt; ng ? grade[i] : 0.0f; }&nbsp;
+ };
+
+ bool operator==(const Student&amp;, const Student&amp;);&nbsp;
+ Student operator+(const Student&amp;, float);
+ <span class="high">Student operator+(float, const Student&amp;);</span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       Our implementation calls the first version with the arguments reversed:
+       </p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ #include "Student.h"
+
+ Student::Student() {
+     no = 0;
+     ng = 0;
+ }
+
+ Student::Student(int n) {
+     float g[] = {0.0f};
+     *this = Student(n, g, 0);
+ }
+
+ Student::Student(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         *this = Student();
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ <span class="high">const Student&amp; Student::operator+=(float g) {
+     if (no != 0 &amp;&amp; ng &lt; NG &amp;&amp; g &gt;= 0.f &amp;&amp; g &lt;= 100.f)
+         grade[ng++] = g;
+     return *this;
+ }</span>
+
+ bool operator==(const Student&amp; lhs, const Student&amp; rhs) {
+     bool same = lhs.getStudentNo() == rhs.getStudentNo() &amp;&amp;&nbsp;
+      lhs.getNoGrades() == rhs.getNoGrades();
+     for (int i = 0; i &lt; lhs.getNoGrades() &amp;&amp; same; i++)
+         same = lhs.getGrade(i) == rhs.getGrade(i);
+     return same;
+ }
+
+ Student operator+(const Student&amp; student, float grade) {
+     Student copy = student; // makes a copy
+     copy += grade;          // calls the += operator on copy&nbsp;
+     return copy;            // return updated copy
+ }
+
+ <span class="high">Student operator+(float grade, const Student&amp; student) {
+     return student + grade; // calls operator+(const
+                             //    Student&amp;, float)
+ }</span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>The following client code produces the results shown on the right:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Helper Operator
+ // helper-addition-operator.cpp
+
+ #include &lt;iostream&gt;
+ #include "Student.h"
+ using namespace std;
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3);
+     harry = harry + 63.7f;
+     harry.display();
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+ 1234:
+  89.40
+  67.80
+  45.50&nbsp;
+  63.70
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <br>
+
+       <p id="fri" class="section">Friendship</p>
+
+       <p>
+       Friendship grants helper functions access to the private members of a class.&nbsp; By
+       granting friendship status, a class lets a helper function access to any of its
+       private members: data members or member functions.&nbsp; Friendship minimizes
+       class bloat.&nbsp;
+       </p>
+
+       <p>
+       To grant a helper function friendship status, we declare the function a <em>friend</em>
+       and place its declaration inside the class definition.&nbsp;
+       A friendship declaration takes the form
+       </p>
+       <pre class="defin"> friend <i>Type identifier</i>(type [, type, ...]);
+</pre>
+
+       <p>where <span class="code"><i>Type</i></span> is the return type of the
+       function and <span class="code"><i>identifier</i></span> is the function's
+       name.&nbsp;
+       </p>
+
+       <p>
+       For example:
+       </p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.h
+
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+ public:
+     Student();
+     Student(int);
+     Student(int, const float*, int);
+     const Student&amp; operator+=(float);
+     void display() const;
+     <span class="high">friend bool operator==(const Student&amp;, const Student&amp;);</span>&nbsp;
+ };
+
+ Student operator+(const Student&amp;, float);
+ Student operator+(float, const Student&amp;);
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       Our implementation looks like:
+       </p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ #include "Student.h"
+
+ Student::Student() {
+     no = 0;
+     ng = 0;
+ }
+
+ Student::Student(int n) {
+     float g[] = {0.0f};
+     *this = Student(n, g, 0);
+ }
+
+ Student::Student(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         *this = Student();
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ const Student&amp; Student::operator+=(float g) {
+     if (no != 0 &amp;&amp; ng &lt; NG &amp;&amp; g &gt;= 0.f &amp;&amp; g &lt;= 100.f)
+         grade[ng++] = g;
+     return *this;
+ }
+
+ Student operator+(const Student&amp; student, float grade) {
+     Student copy = student; // makes a copy
+     copy += grade;          // calls the += operator on copy&nbsp;
+     return copy;            // return updated copy
+ }
+
+ Student operator+(float grade, const Student&amp; student) {
+     return student + grade; // calls operator+(const
+                             //    Student&amp;, float)
+ }
+
+ <span class="high">bool operator==(const Student&amp; lhs, const Student&amp; rhs) {
+     bool same = lhs.no == rhs.no &amp;&amp;&nbsp; lhs.ng == rhs.ng;
+     for (int i = 0; i &lt; lhs.ng &amp;&amp; same; i++)
+         same = lhs.grade[i] == rhs.grade[i];
+     return same;
+ }</span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       We have added the keyword <span class="code">friend</span> to the
+       declaration within the class definition.&nbsp; We do not apply the keyword
+       to the function definition.&nbsp;
+       </p>
+
+       <p>
+       The following client code compares the two objects:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Friends
+ // friends.cpp
+
+ #include &lt;iostream&gt;
+ #include "Student.h"
+ using namespace std;
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3), harry_(1234, gh, 3);
+     harry_ += 63.7f;
+     if (<span class="high">harry == harry_</span>)
+         cout &lt;&lt; "are identical" &lt;&lt; endl;
+     else
+         cout &lt;&lt; "are different" &lt;&lt; endl;
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+
+
+
+ are different&nbsp;
+
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">The Cost of Friendship</p>
+
+       <p>
+       A class definition that grants friendship to a helper function allows that function
+       to alter the values of its private data members.&nbsp; Granting friendship pierces
+       encapsulation.&nbsp;
+       </p>
+       <p>
+       As a rule, we grant friendship judiciously only to helper functions that require both
+       <i>read and write</i> access to the private data members.&nbsp; Where read-only access
+       is all that a helper function needs, using queries is probably more advisable.&nbsp;
+       </p>
+       <p>
+       Friendship is the strongest relationship that a class can grant
+       an external entity.&nbsp;</p>
+
+       <p class="ssection">Friendly Classes <script type="text/javascript" src="./Encapsulation _ Helper Functions_files/optional.js.download"></script>(Optional)</p>
+
+       <p>One class can grant another class access to its private members.&nbsp; A class
+       friendship declaration takes the form</p>
+       <pre class="defin"> friend class <i>Identifier</i>;
+</pre>
+
+       <p>where <span class="code"><i>Identifier</i></span> is the name of the
+       class to which the host class grants friendship privileges.&nbsp;</p>
+
+       <p>
+       For example, an <span class="code">Administrator</span>
+       class needs access to all information held within each
+       <span class="code">Student</span> object.&nbsp; To grant this access, we
+       simply include a class friendship declaration within the <span class="code">Student</span> class definition</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> // Student.h
+
+ const int M = 13;
+
+ class Student {
+     int no;
+     char grade[M+1];
+ public:
+     Student();
+     Student(int);
+     Student(int, const char*);
+     void display() const;
+     const Student&amp; operator+=(char);
+     friend bool areIdentical(const Student&amp;, const Student&amp;);&nbsp;
+     <span class="high">friend class Administrator;</span>
+ };
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">No Reciprocity, Transitivity or Exclusivity <script type="text/javascript" src="./Encapsulation _ Helper Functions_files/optional.js.download"></script>(Optional)</p>
+
+       <p>
+       Friendship is neither reciprocal, transitive nor exclusive.&nbsp; Just because one
+       class is a friend of another class does not mean that the latter is a
+       friend of the former.&nbsp; Just because a class is a friend of another
+       class and that other class is a friend of yet another class does not mean
+       that the latter class is a friend of either of them.&nbsp; A friend of
+       one class may be a friend of any other class.&nbsp;
+       </p>
+
+       <p>
+       Consider three classes: a <span class="code">Student</span>,
+       an <span class="code">Administrator</span> and an
+       <span class="code">Auditor</span>.&nbsp;
+       </p>
+       <ul>
+       <li>Let the
+       <span class="code">Auditor</span> be a friend of the
+       <span class="code">Administrator</span> and the
+       <span class="code">Administrator</span> be a friend
+       of the <span class="code">Student</span></li>
+       <li>
+       Just because the <span class="code">Auditor</span> is a
+       friend of any <span class="code">Administrator</span> and
+       the <span class="code">Administrator</span> is a
+       friend of any <span class="code">Student</span>, the <span class="code">Administrator</span> is not necessarily a friend of
+       the <span class="code">Auditor</span> and the <span class="code">Student</span> is not necessarily a friend of
+       the <span class="code">Administrator</span> (lack of reciprocity)</li>
+       <li>
+       Just because the <span class="code">Auditor</span> is a
+       friend of any <span class="code">Administrator</span> and
+       the <span class="code">Administrator</span> is a friend of
+       any <span class="code">Student</span>, the <span class="code">Auditor</span> is not necessarily a friend of
+       any <span class="code">Student</span> (lack of transitivity)</li>
+       </ul>
+
+       <br>
+
+       <p id="sum" class="section">Summary</p>
+
+       <ul>
+        <li>a helper function is a global function that supports a class</li>
+
+        <li>a helper function refers to the class that it supports
+        through its explicit parameter(s)</li>
+
+        <li>a helper operator is typically an operator that does not change the value
+        of its operands</li>
+
+        <li>a friend function has direct access to the private members
+        of the class that granted the function friendship</li>
+
+        <li>friendship is neither reciprocal, transitive, nor exclusive</li>
+
+        <li>free helper functions reduce coupling at the cost of bloating a class</li>
+
+        <li>friendly helper functions reduce bloating at the cost of piercing encapsulation</li>
+       </ul>
+       <br>
+
+       <p id="exe" class="section">Exercises</p>
+
+       <ul>
+        <li>Complete the Handout on <a href="https://ict.senecacollege.ca/~oop244/pages/handouts/h9.html">Helper Operators</a>.</li>
+
+        <li>Complete the Workshop on <a href="https://ict.senecacollege.ca/~oop244/pages/workshops/w6.html">Expressions</a></li>
+       </ul>
+       <br>
+       <br>
+      </td>
+     </tr>
+    </tbody></table>
+   </td><!-- Detail Menu -->
+
+   <td class="panel1 w150" valign="top" rowspan="2">
+    <ul id="mennav">
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/welco.html">Welcome</a></li>
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/index.html">Notes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/langu.html">&nbsp;Welcome&nbsp;to&nbsp;OO</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/objec.html">&nbsp;Object&nbsp;Terminology</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/compi.html">&nbsp;Modular&nbsp;Programming</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/rudim.html">&nbsp;Types&nbsp;Overloading</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/dynam.html">&nbsp;Dynamic&nbsp;Memory</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/cppst.html">&nbsp;Member&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/ctors.html">&nbsp;Construction</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/membe.html">&nbsp;Current&nbsp;Object</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html">&nbsp;Member&nbsp;Operators</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/deepc.html">&nbsp;Class&nbsp;+&nbsp;Resources</a></li>
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html">&nbsp;Helper&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/custo.html">&nbsp;Input&nbsp;Output</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/inher.html">&nbsp;Derived&nbsp;Classes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/dfunc.html">&nbsp;Derived&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/inclu.html">&nbsp;Virtual&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/abstr.html">&nbsp;Abstract&nbsp;Classes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/param.html">&nbsp;Templates</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/adhoc.html">&nbsp;Polymorphism</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/basic.html">&nbsp;I/O&nbsp;Refinements</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/dclas.html">&nbsp;D&nbsp;C&nbsp;+&nbsp;Resources</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/ansis.html">&nbsp;Standards</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/bibli.html">&nbsp;Bibliography</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/libraries.html">&nbsp;Library&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/ascii.html">&nbsp;ASCII&nbsp;Sequence</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/prece.html">&nbsp;Operator&nbsp;Precedence</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/c_cpp.html">&nbsp;C++&nbsp;and&nbsp;C</a></li>
+     <li><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/workshops.js.download"></script><a href="https://ict.senecacollege.ca/~oop244/dynamic/workshops/index.html">Workshops</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/assignments/index.html">Assignments</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/handouts/index.html">Handouts</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/practice/index.html">Practice</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/resources/index.html">Resources</a></li>
+    </ul>
+   </td>
+  </tr><!-- Content Area Footer -->
+
+  <tr class="navigate">
+   <td class="panel3" align="center">
+    <table class="panel2" width="95%" summary="footer">
+     <tbody><tr>
+      <td align="left">&nbsp;&nbsp; <a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme_p.html" class="text3"><img src="./Encapsulation _ Helper Functions_files/Printer.gif" height="15" width="10" alt="Printer Friendly Version of this Page">&nbsp;print this
+      page</a>&nbsp;&nbsp;</td>
+
+      <td align="right">&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html#top" class="text3">Top&nbsp; <img src="./Encapsulation _ Helper Functions_files/ArrowToT.gif" height="15" width="15" alt="Go Back to the Top of this Page"></a></td>
+     </tr>
+    </tbody></table>
+   </td>
+  </tr><!-- Footer -->
+
+  <tr>
+   <!-- Left Panel -->
+
+   <td class="panel1 lateral center">
+    <!-- Lateral Motion Control -->
+
+    <table width="90%" class="center" summary="previous next">
+     <tbody><tr>
+      <td class="half" align="left"><a href="https://ict.senecacollege.ca/~oop244/pages/content/deepc.html" class="text3"><img src="./Encapsulation _ Helper Functions_files/ArrowToL.gif" height="15" width="15" class="panel1" alt="Previous Reading">&nbsp;&nbsp;Previous:
+      Classes and Resources</a></td>
+
+      <td class="half" align="right"><a href="https://ict.senecacollege.ca/~oop244/pages/content/custo.html" class="text3">Next: Input and Output Operators&nbsp;&nbsp; <img src="./Encapsulation _ Helper Functions_files/ArrowToR.gif" height="15" width="15" class="panel1" alt="Next Reading"></a></td>
+     </tr>
+    </tbody></table>
+    <br>
+    <!-- Alternate Navigation Links -->
+
+    <ul id="altnav" class="center">
+     <li><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/ict.js.download"></script><a href="https://ict.senecac.on.ca/">ICT</a></li>
+
+     <!--<li><a href="https://cs.senecac.on.ca/~bsd">BSD Home</a></li>-->
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/index.html">Home</a></li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/outline.js.download"></script><a href="http://www.senecacollege.ca/ssos/findwithoutsemester/oop244/sict">Outline</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/timeline.html">Timeline&nbsp;</a></li>
+    </ul>
+
+    <ul id="altnav2" class="center">
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/index.html">Notes</a></li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Helper Functions_files/classroom_a.js.download">
+</script><a href="https://scs.senecac.on.ca/~ipc144/pages/content/index.html">IPC Notes</a>
+     </li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Helper Functions_files/classroom_b.js.download">
+</script><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a>
+     </li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Helper Functions_files/workshops.js.download"></script><a href="https://ict.senecacollege.ca/~oop244/dynamic/workshops/index.html">Workshops</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/assignments/index.html">Assignments</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/instructors/index.html">Instructor</a></li>
+    </ul>
+    <br>
+    <!-- Bottom Line -->
+
+    <table cellpadding="1" width="90%" summary="bottom line">
+     <tbody><tr>
+      <td class="w33 text3">&nbsp;&nbsp;Designed by Chris
+      Szalwinski&nbsp;&nbsp;</td>
+
+      <td class="w33 center"><a href="https://ict.senecacollege.ca/~oop244/pages/copyright.html" class="text3">Copying From This Site</a></td>
+
+      <td class="w33 text3" align="right">
+       <script type="text/javascript">
+//<![CDATA[
+                        var lm = document.lastModified.slice(0,-3);
+                        document.write("Last Modified: " +lm)
+       //]]>
+       </script>Last Modified: 05/20/2017 11:50&nbsp;&nbsp;
+      </td>
+     </tr>
+    </tbody></table>
+   </td><!-- Logo - Right Bottom Corner -->
+
+   <td class="panel2 w150" align="center"><img src="./Encapsulation _ Helper Functions_files/Logo.gif" alt="Logo" height="73" width="85"><br><a rel="license" href="http://creativecommons.org/licenses/by/2.5/ca/"><img alt="Creative Commons License" style="border-width:0" src="./Encapsulation _ Helper Functions_files/88x31.png"></a></td>
+  </tr>
+ </tbody></table>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

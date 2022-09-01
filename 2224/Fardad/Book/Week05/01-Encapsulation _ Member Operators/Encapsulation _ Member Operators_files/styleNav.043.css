@@ -1,0 +1,275 @@
+/* styleNav.043.css */
+
+/* include style.043.css styleS*.css */
+
+/* Web Page Format */
+
+/* Banner */
+.banner { 
+    background: #4599B1;
+    }
+.tbanner { 
+    background: #4599B1; 
+    width: 500px;
+    }
+.tbody  { 
+    background: #FFFFFF; 
+    width: 700px;
+    }
+
+/* Panels */
+.panel1 { 
+    background: #AEE7FC;
+    }
+.panel2 { 
+    background: #EDEDFE; 
+    padding-left: 5px; 
+    padding-right: 5px;
+    }
+.panel3 { 
+    background: #EDEDFE; 
+    width: 700px;
+    }
+.panel4 { 
+    background: #FFFFC6;
+    }
+
+/* Text */
+.text0  { 
+    color: #ffffff; 
+    font-size: 24pt;
+    }
+.text1  { 
+    color: #0303A8; 
+    font-size: 8pt; 
+    font-weight: bold;
+    vertical-align: middle;
+    }
+.text2  { 
+    color: #0303A8; 
+    font-size: 1.1em;
+    }
+.text3  { 
+    color: #0303A8; 
+    font-size: 8pt;
+    }
+.text4  { 
+    color: #4599B1; 
+    width: 36pt; 
+    height: 1pt;
+    }
+.text9  { 
+    font-size: small;
+    }
+
+
+/* Navigation */
+
+/* Tabs */
+
+#tabnav
+{   
+    height: 25px;
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#tabnav ul, #tabnav li
+{
+    margin: 0; 
+    padding: 0;
+    display: inline;
+    list-style-type: none;
+}
+    
+#tabnav a:link, #tabnav a:visited
+{
+    float: left;
+    background: #96D7E3;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    margin-right: 5px;
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #17749E;
+    -moz-border-radius-topleft: 9px;
+    -moz-border-radius-topright: 9px;
+    text-decoration: none;
+    color: #000000;
+}
+
+#tabnav a:link.active, #tabnav a:visited.active
+{
+    border-bottom: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+#tabnav a:hover
+{
+        background: #ffffff;
+}
+
+/* Menu */
+
+#mennav
+{   
+    width: 100px;
+    margin: 0;
+    padding-left: 0px;
+    padding-top: 20px;
+    display: list-item;
+    list-style-type: none;
+}
+
+#mennav ul, #mennav li
+{
+    margin: 0; 
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: list-item;
+    list-style-type: none;
+}
+    
+#mennav a:link, #mennav a:visited
+{
+    background: #96D7E3;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    margin-right: 5px;
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #17749E;
+    -moz-border-radius-topleft: 9px;
+    -moz-border-radius-topright: 9px;
+    text-decoration: none;
+    color: #000000;
+}
+
+#mennav a:link.active, #mennav a:visited.active
+{
+    border-left: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+#mennav a:hover
+{
+        background: #ffffff;
+}
+
+/* Alternative Navigation */
+
+#altnav
+{   
+    width: 700px;
+    height: 20px;
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#altnav ul, #altnav li
+{
+    margin: 0; 
+    padding: 0;
+    display: inline;
+    list-style-type: none;
+}
+    
+#altnav a:link, #altnav a:visited
+{
+    background: #96D7E3;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    margin-right: 5px;
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #17749E;
+    -moz-border-radius-topleft: 9px;
+    -moz-border-radius-topright: 9px;
+    text-decoration: none;
+    color: #000000;
+}
+
+#altnav a:link.active, #altnav a:visited.active
+{
+    border-bottom: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+#altnav a:hover
+{
+        background: #ffffff;
+}
+
+#altnav2
+{   
+    width: 700px;
+    height: 20px;
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#altnav2 ul, #altnav2 li
+{
+    margin: 0; 
+    padding: 0;
+    display: inline;
+    list-style-type: none;
+}
+    
+#altnav2 a:link, #altnav2 a:visited
+{
+    background: #96D7E3;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    margin-right: 5px;
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #17749E;
+    -moz-border-radius-topleft: 9px;
+    -moz-border-radius-topright: 9px;
+    text-decoration: none;
+    color: #000000;
+}
+
+#altnav2 a:link.active, #altnav2 a:visited.active
+{
+    border-bottom: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+#altnav2 a:hover
+{
+        background: #ffffff;
+}
+
+/* RRE: mousing over underlines */
+a:active
+{
+    color: #0072FF;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+a:hover.text3
+{
+    vertical-align: bottom;
+    background: #ffffff;
+    text-decoration: none;
+}
+
+a.text3
+{
+    vertical-align: bottom;
+}

@@ -1,0 +1,46 @@
+/* styleScreen.css */
+
+/* include style.043.css */
+
+body    { 
+    background: #9B9999;
+    }
+a   { 
+    text-decoration: none; 
+    vertical-align: top;
+    }
+a:hover { 
+    background: #EDEDFE; 
+    color: #0000ff;
+    }
+    
+/* Text font */
+
+p, td, ul, li   { 
+    font-family: "Franklin Book Gothic", sans-serif; 
+    font-size: small; 
+    }
+.text0, .text1, .text2, .text3, .text4, .text9  { 
+    font-family: "Franklin Book Gothic", sans-serif; 
+    font-size: small; 
+    } 
+
+/* Chapter Headings font */
+
+.texthead { 
+    font-family: "Arial", sans-serif; 
+    font-size: x-large; 
+    font-weight: bold; 
+    color: red;
+    }
+.textagend, .texth, .quote, .section, .ssection, .sssection { 
+    font-family: "Arial", sans-serif; 
+    }
+.sssection {
+    font-size: small;
+    }
+
+
+
+
+

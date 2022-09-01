@@ -1,0 +1,1690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0061)https://ict.senecacollege.ca/~oop244/pages/content/overl.html -->
+<html lang="en-us" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="generator" content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+
+ <title>Encapsulation | Member Operators</title>
+ 
+ <meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.icra.org/ratingsv02.html&quot; l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true r (n 0 s 0 v 0 l 0) &quot;http://www.classify.org/safesurf/&quot; l gen true r (SS~~000 1))">
+ <meta name="Copyright" content="(c) Copyright Chris Szalwinski and Seneca College 2016">
+ <meta name="Description" content="Welcome to the ICT Programming Stream C++ Web Site. On this site you can find the introductory course to object-oriented programming. Designed by Chris Szalwinski.">
+ <meta name="Abstract" content="This subject introduces the principles of object-oriented programming. Students study the solution of problems using objects with the C++ programming language. The emphasis throughout is on the solution of small problems.">
+ <meta name="Author" content="chris.szalwinski@senecacollege.ca">
+ <meta name="Keywords" content="software development, object-oriented programming, lecture notes">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Member Operators_files/style.043.css">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Member Operators_files/styleScreen.043.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Member Operators_files/styleSPrint.043.css" media="print">
+ <link rel="stylesheet" type="text/css" href="./Encapsulation _ Member Operators_files/styleNav.043.css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1060.0" data-gr-ext-installed="">
+ <table id="top" width="850" cellspacing="0" cellpadding="0" summary="body">
+  <!-- Banner -->
+
+  <tbody><tr class="banner">
+   <td colspan="2" class="banner">
+    <table cellspacing="0" cellpadding="0" summary="banner">
+     <tbody><tr>
+      <td class="w250 banner">
+       <div class="center">
+        <span class="text0">&nbsp;&nbsp;Software&nbsp;&nbsp;
+        <br>
+        &nbsp;&nbsp;Development&nbsp;&nbsp;</span>
+       </div>
+      </td>
+
+      <td class="tbanner"><img src="./Encapsulation _ Member Operators_files/Banner4.gif" height="120" width="500" alt="Software Development"></td>
+     </tr>
+    </tbody></table>
+   </td>
+  </tr><!-- Navigation Bar -->
+
+  <tr class="navigate">
+   <td class="panel1" align="left" valign="bottom">
+    <ul id="tabnav">
+     <li><script type="text/javascript" src="./Encapsulation _ Member Operators_files/ict.js.download"></script><a href="https://ict.senecac.on.ca/">ICT</a></li>
+
+
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/index.html">Home</a></li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Member Operators_files/outline.js.download"></script><a href="http://www.senecacollege.ca/ssos/findwithoutsemester/oop244/sict">Outline</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/timeline.html">Timeline</a></li>
+
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/index.html">Notes</a></li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Member Operators_files/classroom_a.js.download">
+</script><a href="https://scs.senecac.on.ca/~ipc144/pages/content/index.html">IPC Notes</a>
+     </li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Member Operators_files/classroom_b.js.download">
+</script><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a>
+     </li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Member Operators_files/workshops.js.download"></script><a href="https://ict.senecacollege.ca/~oop244/dynamic/workshops/index.html">Workshops</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/assignments/index.html">Assignments</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/instructors/index.html">Instructor</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/overl_p.html"><img src="./Encapsulation _ Member Operators_files/Printer.gif" height="15" width="10" alt="Printer Friendly Version of this Page"></a></li>
+    </ul>
+   </td><!-- Web Site Title -->
+
+   <td class="panel2 w150" align="center"><span class="text1"><script type="text/javascript" src="./Encapsulation _ Member Operators_files/subject.js.download">
+</script>OOP244</span></td>
+  </tr><!-- Body Cells -->
+
+  <tr class="content">
+   <!-- Content Area -->
+
+   <td class="tbody" valign="top">
+    <table cellpadding="10" width="100%" summary="content">
+     <tbody><tr>
+      <td class="content" valign="top">
+       <br>
+
+       <div class="center">
+        <span class="texth">Part C - Encapsulation</span>
+        <br>
+        <br>
+        <span class="texthead">Member Operators</span>
+        <br>
+        <br>
+        <span class="textagend">
+        Overload operators to form expressions involving objects of a class
+        <br>
+        Describe the syntax for overloading operators that are members of a class
+        <br>
+        Describe casting and conversion operations on instances of a class</span>
+
+        <p class="quote">"Programmers hate surprises: Overload operators only for good reason, and
+        preserve natural semantics; if that's difficult, you might be misusing
+        operator overloading" (Sutter, Alexandrescu, 2005)</p>
+        <span class="textagend">
+        <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#ope">Operations</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#bin">Binary</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#una">Unary</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#con">Conversions</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#cas">Casts</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#tem">Temporaries</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#sum">Summary</a>
+        | <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#exe">Exercise</a>
+        </span>
+       </div>
+       <br>
+       <br>
+
+       <p>
+       An important feature of object-oriented programs is support for expressions composed
+       of objects.&nbsp; An expression consists of an operator and a set of operands.&nbsp;
+       The expression evaluates to a value of specific type.&nbsp; In languages like C++, all
+       operators are built-in.&nbsp; The core language defines the logic for the operands of
+       fundamental type.&nbsp; To support expressions with operands of class type, we need to
+       overload the built-in operators for those operands.&nbsp; Overloading an operator entails
+       declaring a corresponding function in the class definition and defining its logic in
+       the implementation file.&nbsp;
+       </p>
+
+       <p>
+       This chapter lists the C++ operators that we may overload and describes the syntax
+       for overloading operators using member functions.&nbsp; These functions cover unary
+       and binary operations on the current object.&nbsp; This chapter also describes how
+       to define casting operations and how to use temporary object effectively.</p>
+
+       <br>
+
+
+       <p id="ope" class="section">Operations</p>
+
+       <p>
+       In the C++ language, the keyword <span class="code">operator</span> identifies an overloaded
+       operation.&nbsp; We follow the keyword by the operator's symbol.&nbsp; The signature of a
+       member function that overloads an operator consists of the keyword, the symbol and the
+       type of the right operand, if any, within parentheses.&nbsp; The left operand of any
+       member operator is the current object.
+       </p>
+       <p>
+       For example, an overloaded assignment operator for a
+       <span class="code">Student</span> right operand takes the form
+       </p>
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre>     <span class="high">Student&amp; operator=(const Student&amp;);&nbsp;</span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">Candidates for Overloading</p>
+
+       <p>
+       C++ lets us overload the following operators (amongst others):&nbsp;</p>
+
+       <ul>
+        <li>binary arithmetic (<span class="code">+ - * /
+        %</span>)</li>
+
+        <li>assignment - simple and compound (<span class="code">= += -= *= /=
+        %=</span>)</li>
+
+        <li>unary - pre-fix post-fix plus minus (<span class="code">++ -- + -</span>)</li>
+
+        <li>relational (<span class="code">== &lt; &gt; &lt;= &gt;=
+        !=</span>)</li>
+
+        <li>logical (<span class="code">&amp;&amp; || !</span>)</li>
+
+        <li>insertion, extraction (<span class="code">&lt;&lt; &gt;&gt;</span>)</li>
+       </ul>
+
+       <p>
+       C++ DOES NOT ALLOW overloading of the following operators (amongst others):</p>
+
+       <ul>
+        <li>the scope resolution operator (<span class="code">::</span>)</li>
+
+        <li>the member selection operator (<span class="code">.</span>)</li>
+
+        <li>the member selection through pointer to member operator
+        (<span class="code">.*</span>)</li>
+
+        <li>the conditional operator (<span class="code">?:</span>)</li>
+
+        <!--<li>the sizeof operator (<span class="code">sizeof</span>)</li>
+
+        <li>the typeid operator (<span class="code">type()</span>)</li>-->
+       </ul>
+
+       <p>
+       C++ DOES NOT let us introduce or define new operators.&nbsp;</p>
+
+       <p class="sssection">Classifying Operators</p>
+
+       <p>
+       We classify operators by the number of operands that they take:
+       </p>
+
+       <ul>
+       <li>unary - one operand - post-fix increment/decrement, pre-fix increment/decrement, pre-fix plus, pre-fix minus</li>
+       <li>binary - two operand - assignment, compound assignment, arithmetic, relational, logical</li>
+       <li>ternary - three operands - conditional operator</li>
+       </ul>
+
+       <p class="sssection">Members and Helpers</p>
+
+       <p>
+       We overload operators in either of two ways, as:</p>
+
+       <ul>
+        <li>member operators - part of the class definition with direct access to the class representation
+        </li>
+
+        <li>helper operators - supporting the class, without direct access to its representation
+       </li></ul>
+
+       <p>
+       We prefer to declare operators that change the state of their left operand
+       as member operators.&nbsp; Helper operators are described
+       separately in the chapter entitled <a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html">Helper Functions</a>.
+       </p>
+
+       <p class="ssection">Overloading a Member Operator</p>
+
+       <p class="sssection">Signature</p>
+
+       <p>
+       The signature of an overloaded member operator consists of:</p>
+
+       <ul>
+        <li>the <span class="code">operator</span> keyword</li>
+
+        <li>the operation symbol</li>
+
+        <li>the type of its right operand, if any</li>
+
+        <li>the <span class="code">const</span> status of the
+        operation</li>
+       </ul>
+
+       <p>The compiler binds an expression to the member function with the signature
+       that matches the operator symbol, the operand type and the <span class="code">const</span>
+       status.&nbsp;
+       </p>
+
+       <p class="sssection">Promotion or Narrowing of Arguments</p>
+
+       <p>If the compiler cannot find an exact match to an operation's signature,
+       the compiler will attempt a rather complicated selection process to find an
+       optimal fit, promoting or narrowing the operand value into a related type
+       if necessary.&nbsp;
+       </p>
+
+       <p class="sssection">Type of the Evaluated Expression</p>
+
+       <p>The return type of the member function declaration identifies the type of
+       the evaluated expression.</p>
+
+       <!--<p class="sssection">Definition</p>
+
+       <p>
+       To copy the string into the <span class=code>grade</span>
+       instance variable, the member function's definition looks something like:
+       </p>
+
+       <table width="45%" summary="">
+        <tr>
+         <td class="w70">
+          <pre>
+ void <span class="high">Student::operator=</span>(const char* g) {&nbsp;
+     strncpy(grade, g, M);
+     grade[M] = '\0';  // required for strncpy&nbsp;
+ }
+</pre>
+         </td>
+        </tr>
+       </table>
+
+       <p>
+       Since the return type is <span class=code>void</span> the operation
+       evaluates to nothing.&nbsp; For the operation to evaluate to a
+       copy of the <span class=code>Student</span> as modified, we can
+       write:
+       </p>
+
+       <table width="45%" summary="">
+        <tr>
+         <td class="w70">
+          <pre>
+ <span class="high">Student</span> Student::operator=(const char* g) {&nbsp;
+     strncpy(grade, g, M);
+     grade[M] = '\0';
+     <span class="high">return *this;</span>
+ }
+</pre>
+         </td>
+        </tr>
+       </table>-->
+
+       <p class="ssection">Good Design Practice</p>
+
+       <p>
+       Programmers expect an operator to perform its operation in a way
+       similar if not identical to the way that the operator performs its operation on any
+       fundamental type as defined by the core language.&nbsp; For instance, <span class="code">+</span>
+       implies addition of two values in a binary operation (not subtraction).&nbsp;
+       In defining a member operator we code its logic to be consistent with operations on
+       other types.
+       </p>
+
+       <br>
+
+       <p id="bin" class="section">Binary Operators</p>
+
+       <p>
+       A binary operation consists of one operator and two operands.&nbsp;
+       In a binary member operator, the left operand is the current object and the
+       member function takes one explicit parameter: the right operand.&nbsp;</p>
+       <p>
+       The declaration of a binary member operator takes the form</p>
+       <pre class="defin"> <i>return_type</i> operator <i>symbol</i> (<i>type [identifier]</i>)
+</pre>
+
+       <p><span class="code"><i>return_type</i></span> is the type of the
+       evaluated expression.&nbsp; <span class="code">operator</span> identifies
+       the function as an operation.&nbsp; <span class="code"><i>symbol</i></span>
+       specifies the kind of operation.&nbsp; <span class="code"><i>type</i></span> is the type of the right operand.&nbsp; <span class="code"><i>identifier</i></span> is the right operand's name.&nbsp; </p>
+
+       <p class="ssection">Example</p>
+
+       <p>
+       Let us overload the <span class="code">+=</span> operator for a <span class="code">float</span> as the
+       right operand, in order to add a single grade to a <span class="code">Student</span> object:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Overloading Operators
+ // operators.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+     void set(int, const float*, int);
+ public:
+     Student();
+     Student(int, const float*, int);
+     void display() const;
+     <span class="high">Student&amp; operator+=(float g);</span>
+ };
+
+ Student::Student() {
+     no = 0;
+     ng = 0;
+ }
+
+ Student::Student(int sn, const float* g, int ng_) {
+     set(sn, g, ng_);
+ }
+
+ void Student::set(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         no = 0;
+         ng = 0;
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ <span class="high">Student&amp; Student::operator+=(float g) {
+     if (no != 0 &amp;&amp; ng &lt; NG &amp;&amp; g &gt;= 0.f &amp;&amp; g &lt;= 100.f)
+         grade[ng++] = g;
+     return *this;
+ }</span>
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3);
+     harry.display();
+     <span class="high">harry += 78.23f;</span>
+     harry.display();
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1234:
+  89.40
+  67.80
+  45.50
+ 1234:
+  89.40
+  67.80
+  45.50
+  78.23&nbsp;
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+       <br>
+
+       <p id="una" class="section">Unary Operators</p>
+
+       <p>A unary operation
+       consists of one operator and one operand.&nbsp;
+       The left operand of a unary member operator is the current object.&nbsp;
+       The operator does not take any explicit
+       parameters (with one exception - see post-fix operators below).&nbsp;
+       </p>
+       <p>
+       The header for a unary member operator takes the
+       form</p>
+       <pre class="defin"> <i>return_type</i> operator <i>symbol</i>()
+</pre>
+
+       <p><span class="code"><i>return_type</i></span> is the type of the
+       evaluated expression.&nbsp; <span class="code">operator</span>
+       identifies an operation.&nbsp; <span class="code"><i>symbol</i></span> identifies the kind of operation.&nbsp;</p>
+
+       <p class="ssection">Pre-Fix Operators</p>
+
+       <p>
+       We overload the pre-fix increment/decrement operators to increment/decrement
+       the current object and return a reference to its updated value.&nbsp; The header for
+       a pre-fix operator takes the form</p>
+       <pre class="defin"> <i>Type</i>&amp; operator++()  or  <i>Type</i>&amp; operator--()
+</pre>
+
+       <p class="sssection">Example</p>
+
+       <p>
+       Let us overload the pre-fix increment operator for our
+       <span class="code">Student</span> class so that a pre-fix expression
+       increases all of the <span class="code">Student</span>'s grades by one mark,
+       if possible:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Pre-Fix Operators
+ // preFixOps.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+     void set(int, const float*, int);
+ public:
+     Student();
+     Student(int, const float*, int);
+     void display() const;
+     <span class="high">Student&amp; operator++();</span>
+ };
+
+ Student::Student() {
+     no = 0;
+     ng = 0;
+ }
+
+ Student::Student(int sn, const float* g, int ng_) {
+     set(sn, g, ng_);
+ }
+
+ void Student::set(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         no = 0;
+         ng = 0;
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ <span class="high">Student&amp; Student::operator++() {
+     for (int i = 0; i &lt; ng; i++)
+         if (grade[i] &lt; 99.0f) grade[i] += 1.f;
+     return *this;
+ }</span>
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3), backup;
+     harry.display();
+     <span class="high">backup = ++harry;</span>
+     harry.display();
+     backup.display();
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1234:
+  89.40
+  67.80
+  45.50
+ 1234:
+  90.40
+  68.80
+  46.50&nbsp;
+ 1234:
+  90.40
+  68.80
+  46.50&nbsp;
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">Post-Fix Operators</p>
+
+       <p>
+       We overload the post-fix operators to increment/decrement the current
+       object <i>after</i> returning its value.&nbsp; The header for
+       a post-fix operator takes the form</p>
+       <pre class="defin"> <i>return_type</i> operator++(int)  or  <i>Type</i> operator--(int)
+</pre>
+
+       <p>The <span class="code">int</span> type in the header
+       distinguishes the post-fix operators from their pre-fix
+       counterparts.</p>
+
+       <p class="sssection">Example</p>
+
+       <p>
+       Let us overload the incrementing post-fix
+       operator for our <span class="code">Student</span> class so that a post-fix
+       expression increases all of the <span class="code">Student</span>'s grades by one
+       mark, if possible:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Post-Fix Operators
+ // postFixOps.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+     void set(int, const float*, int);
+ public:
+     Student();
+     Student(int, const float*, int);
+     void display() const;
+     Student&amp; operator++();
+     <span class="high">Student operator++(int);</span>
+ };
+
+ Student::Student() {
+     no = 0;
+     ng = 0;
+ }
+
+ Student::Student(int sn, const float* g, int ng_) {
+     set(sn, g, ng_);
+ }
+
+ void Student::set(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         no = 0;
+         ng = 0;
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ Student&amp; Student::operator++() {
+     for (int i = 0; i &lt; ng; i++)
+         if (grade[i] &lt; 99.0f) grade[i] += 1.f;
+     return *this;
+ }
+
+ <span class="high">Student Student::operator++(int) {
+     Student s = *this;  // save the original
+     ++(*this);          // call the pre-fix operator
+     return s;           // return the original
+ }</span>
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3), backup;
+     harry.display();
+     <span class="high">backup = harry++;</span>
+     harry.display();
+     backup.display();
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1234:
+  89.40
+  67.80
+  45.50
+ 1234:
+  90.40
+  68.80
+  46.50&nbsp;
+ 1234:
+  89.40
+  67.80
+  45.50
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       We avoid duplicating logic by calling the pre-fix operator from the
+       post-fix operator.&nbsp;</p>
+
+       <p class="ssection">Return Types</p>
+
+       <p>
+       The return types of the pre-fix and post-fix operators differ.&nbsp;
+       The post-fix operator returns a copy of the
+       current object as it was <em>before</em> any changes took effect.&nbsp;
+       The pre-fix operator returns a reference to the current object, which accesses
+       the data <em>after</em> the changes have taken effect.</p>
+
+       <br>
+
+       <p id="con" class="section">Type Conversion Operators</p>
+
+       <p>
+       Type conversion operators define implicit conversions to different types,
+       including fundamental types.&nbsp;</p>
+
+       <!--<p>
+       Consider the following code that truncates a <span class="code">Student</span>
+       object to an integer holding the student number.&nbsp; To implement this operation,
+       we need to define a conversion to an <span class="code">int</span> type.</p>
+
+       <table width="95%" summary="">
+        <tr>
+         <td class="half">
+          <pre>
+ #include &lt;iostream&gt;
+ using namespace std;
+ #include "Student.h"
+
+ int main() {
+     int n;
+     Student harry(1234, "ABACA");
+
+     <span class="high">n = harry;</span>
+
+     cout &lt;&lt; n &lt;&lt; endl;
+     return 0;
+ }
+</pre>
+         </td>
+
+         <td class="half">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+ 001234
+
+
+</pre>
+         </td>
+        </tr>
+       </table>
+       <p>
+       The declaration of a conversion operator takes the form
+       </p>
+       <pre class="defin">
+ operator <i>Type</i>() const;
+</pre>
+       <p>The target type follows the <span class="code">
+       operator</span> keyword.&#160;
+       </p>-->
+
+       <p>
+       For the following code to compile, the compiler needs information on how to convert a
+       <span class="code">Student</span> object to a <span class="code">bool</span> value:</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> Student harry;
+
+ if (<span class="high">harry</span>)
+     harry.display();
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">bool operator</p>
+       <p>
+       Let us define a conversion operator that returns <span class="code">true</span>
+       if the <span class="code">Student</span> object has valid data and <span class="code">
+       false</span> if the object is in a safe empty state.&nbsp;
+       </p>
+       <p>
+       We add the following declaration to the class definition:</p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+     void set(int, const float*, int);&nbsp;
+ public:
+     Student();
+     Student(int, const float*, int);
+     void display() const;
+     <span class="high">operator bool() const;</span>
+ };
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+       <p>
+       We define the conversion operator in the implementation file
+       </p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> #include "Student.h"
+
+ // ...
+
+ <span class="high">Student::operator bool() const { return no != 0; } </span>
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">Good Design Tip</p>
+
+       <p>
+       Conversion operators easily lead to ambiguities.&nbsp; Good design
+       uses them quite sparingly and keeps their implementations trivial.&nbsp;</p>
+       <br>
+
+       <p id="cas" class="section">Cast Operator</p>
+
+       <p>
+       C++ defines the casting operation for a class type in terms of a single-argument
+       constructor.&nbsp; This overloaded constructor defines the rule for casting a
+       value of its parameter type to the class type, as well as constructing an
+       object from an argument of the parameter type.&nbsp;
+       </p>
+
+       <p>
+       The following program demonstrates both uses of a single-argument constructor
+       on an <span class="code">int</span> argument:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Casting
+ // casting.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+     void set(int, const float*, int);
+ public:
+     Student();
+     <span class="high">Student(int);</span>
+     Student(int, const float*, int);
+     void display() const;
+ };
+
+ Student::Student() {
+     no = 0;
+     ng = 0;
+ }
+
+ <span class="high">Student::Student(int sn) {
+     float g[] = {0.0f};
+     set(sn, g, 0);
+ }</span>
+
+ Student::Student(int sn, const float* g, int ng_) {
+     set(sn, g, ng_);
+ }
+
+ void Student::set(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         no = 0;
+         ng = 0;
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ int main () {
+     Student harry<span class="high">(975)</span>, nancy;
+
+     harry.display();
+     nancy = <span class="high">(Student)428</span>;
+     nancy.display();
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 975:&nbsp;
+
+ 428:&nbsp;
+
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       The first use converts <span class="code">975</span>
+       to the <span class="code">Student</span> object <span class="code">harry</span>.&nbsp;
+       The second use casts <span class="code">428</span> to a <span class="code">Student</span>
+       object containing the number <span class="code">428</span>.&nbsp; Both objects
+       hold empty grade lists.&nbsp;
+       </p>
+
+       <p class="sssection">Promotion <script type="text/javascript" src="./Encapsulation _ Member Operators_files/optional.js.download"></script>(Optional)</p>
+
+       <p>
+       For the same result as the above cast, we may omit the cast operator and defer to
+       the compiler promoting the <span class="code">int</span> value <span class="code">428</span>
+       to a <span class="code">Student</span> object before assigning the object to
+       <span class="code">nancy</span>:</p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> int main () {
+     Student harry(975), nancy;
+
+     harry.display();
+     cout  &lt;&lt; endl;
+     nancy = <span class="high">428</span>; // promotes an int to a Student&nbsp;
+     nancy.display();
+     cout  &lt;&lt; endl;
+ }
+</pre>
+         </td>
+         <td>
+          <pre class="result">
+
+
+ 975&nbsp;
+
+
+ 428&nbsp;
+
+
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       The compiler inserts code that creates a temporary <span class="code">Student</span>
+       object using the single-argument constructor.&nbsp; The constructor receives the
+       value <span class="code">428</span> and initializes <span class="code">no</span>
+       to <span class="code">428</span> and <span class="code">ng</span> to <span class="code">0</span>.&nbsp;
+       Then, the assignment operator copies the temporary object to <span class="code">nancy</span>.&nbsp;
+       Finally, the compiler inserts code that destroys the temporary object removing it from memory.&nbsp;
+       </p>
+
+       <p class="sssection">Explicit <script type="text/javascript" src="./Encapsulation _ Member Operators_files/optional.js.download"></script>(Optional)</p>
+
+       <p>
+       Declaring several single-argument constructors raise the possibility of potential
+       ambiguities in automatic conversions form one type to another.&nbsp;
+       Limiting the number of single-argument constructors in a class definition
+       helps avoid such potential ambiguities.</p>
+
+       <p>
+       To prohibit the compiler from using a single-argument constructor for any implicit
+       conversion, we declare that constructor <span class="code">explicit</span>:
+       </p>
+
+       <table width="45%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> class Student {
+     int no;
+     char grade[M+1];
+     void set(int, const float*, int);&nbsp;
+ public:
+     Student();
+     <span class="high">explicit</span> Student(int);
+     Student(int, const float*, int);
+     void display() const;
+ };
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+       <p>
+       With such a declaration, the second invocation in the example at the start of the
+       section above (<span class="code">nancy = 428</span>) would generate a compiler error.&nbsp;
+       </p>
+
+       <br>
+
+       <p id="tem" class="section">Temporary Objects</p>
+
+       <p>
+       C++ compilers create temporary objects in a variety of situations.&nbsp; A temporary
+       object has no name and is destroyed as the last step in evaluating the expression that
+       contains its creation point.&nbsp;
+       </p>
+       <p>
+       Consider the assignment expression below:
+       </p>
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td>
+          <pre> int main () {
+     Student harry(975), nancy;
+
+     harry.display();
+     nancy = <span class="high">Student(428)</span>; // temporary Student object&nbsp;
+     nancy.display();
+ }
+</pre>
+         </td>
+         <td>
+          <pre class="result">
+
+
+ 975:&nbsp;
+
+ 428:&nbsp;
+
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p class="ssection">Localizing Constructor Logic</p>
+
+       <p>
+       We can use temporary objects to access validation logic localized within one
+       constructor.&nbsp; Note the temporary object assignments to the current
+       object (<span class="code">*this</span>) in the one-argument and three-argument
+       constructors below:
+       </p>
+
+       <table width="95%" summary="">
+        <tbody><tr>
+         <td class="w70">
+          <pre> // Localized Validation
+ // localize.cpp
+
+ #include &lt;iostream&gt;
+ using namespace std;
+ const int NG = 20;
+
+ class Student {
+     int no;
+     float grade[NG];
+     int ng;
+ public:
+     Student();
+     <span class="high">Student(int);</span>
+     Student(int, const float*, int);
+     void display() const;
+ };
+
+ Student::Student() {
+     // safe empty state
+     no = 0;
+     ng = 0;
+ }
+
+ Student::Student(int sn) {
+     float g[] = {0.0f};
+     <span class="high">*this = Student(sn, g, 0);</span>
+ }
+
+ Student::Student(int sn, const float* g, int ng_) {&nbsp;
+     bool valid = sn &gt; 0 &amp;&amp; g != nullptr &amp;&amp; ng_ &gt;= 0;
+     if (valid)
+         for (int i = 0; i &lt; ng_ &amp;&amp; valid; i++)
+             valid = g[i] &gt;= 0.0f &amp;&amp; g[i] &lt;= 100.0f;
+
+     if (valid) {
+         // accept the client's data
+         no = sn;
+         ng = ng_ &lt; NG ? ng_ : NG;
+         for (int i = 0; i &lt; ng; i++)
+             grade[i] = g[i];
+     } else {
+         <span class="code">*this = Student();</span>
+     }
+ }
+
+ void Student::display() const {
+     if (no &gt; 0) {
+         cout &lt;&lt; no &lt;&lt; ":\n";
+         cout.setf(ios::fixed);
+         cout.precision(2);
+         for (int i = 0; i &lt; ng; i++) {&nbsp;
+             cout.width(6);
+             cout &lt;&lt; grade[i] &lt;&lt; endl;
+         }
+         cout.unsetf(ios::fixed);
+         cout.precision(6);
+     } else {
+         cout &lt;&lt; "no data available" &lt;&lt; endl;&nbsp;
+     }
+ }
+
+ int main () {
+     float gh[] = {89.4f, 67.8f, 45.5f};
+     Student harry(1234, gh, 3), josee(1235), empty;
+     harry.display();
+     josee.display();
+     empty.display();
+ }
+</pre>
+         </td>
+
+         <td class="w30">
+          <pre class="result">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1234:
+  89.40
+  67.80
+  45.50
+ 1235:
+ no data available&nbsp;
+
+</pre>
+         </td>
+        </tr>
+       </tbody></table>
+
+       <p>
+       The three-argument constructor validates all data received from client code.&nbsp;
+       If the validation fails, this constructor creates a temporary object in a safe empty
+       state and assigns that temporary object to the current object.&nbsp; Note that the
+       single-argument constructor uses the temporary object created by the three-argument
+       constructor to initialize the current object.&nbsp;
+       </p>
+
+       <p class="ssection">Good Design Tip</p>
+
+       <p>
+       Using temporary objects to avoid repeated logic is good programming practice.&nbsp;
+       If we update the logic later, there is no chance that we will update the logic in one
+       part of the source code and neglect to update identical logic in another part of the
+       code.&nbsp;
+       </p>
+
+       <br>
+
+       <p id="sum" class="section">Summary</p>
+
+       <ul>
+        <li>C++ allows overloading of most of the operators for operands of class type</li>
+
+        <li>we cannot define new operators or redefine operations on the fundamental types</li>
+
+        <li>the keyword <span class="code">operator</span> followed by a symbol identifies an operation</li>
+
+        <li>the left operand in an overloaded member operator is the current object</li>
+
+        <li>we use member operators to overload operations that modify the left operand</li>
+
+        <li>the <span class="code">int</span> keyword in the signature for increment/decrement
+        operator identifies the post-fix operation distinguishing it from the pre-fix operation</li>
+
+        <li>we use temporary objects to localize logic, which improves maintainability</li>
+
+       </ul>
+       <br>
+
+       <p id="exe" class="section">Exercise</p>
+
+       <ul>
+        <li>Complete the Handout on <a href="https://ict.senecacollege.ca/~oop244/pages/handouts/h8.html">Member Operators</a></li>
+       </ul>
+       <br>
+       <br>
+      </td>
+     </tr>
+    </tbody></table>
+   </td><!-- Detail Menu -->
+
+   <td class="panel1 w150" valign="top" rowspan="2">
+    <ul id="mennav">
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/welco.html">Welcome</a></li>
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/index.html">Notes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/langu.html">&nbsp;Welcome&nbsp;to&nbsp;OO</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/objec.html">&nbsp;Object&nbsp;Terminology</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/compi.html">&nbsp;Modular&nbsp;Programming</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/rudim.html">&nbsp;Types&nbsp;Overloading</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/dynam.html">&nbsp;Dynamic&nbsp;Memory</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/cppst.html">&nbsp;Member&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/ctors.html">&nbsp;Construction</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/membe.html">&nbsp;Current&nbsp;Object</a></li>
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html">&nbsp;Member&nbsp;Operators</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/deepc.html">&nbsp;Class&nbsp;+&nbsp;Resources</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/nonme.html">&nbsp;Helper&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/custo.html">&nbsp;Input&nbsp;Output</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/inher.html">&nbsp;Derived&nbsp;Classes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/dfunc.html">&nbsp;Derived&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/inclu.html">&nbsp;Virtual&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/abstr.html">&nbsp;Abstract&nbsp;Classes</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/param.html">&nbsp;Templates</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/adhoc.html">&nbsp;Polymorphism</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/basic.html">&nbsp;I/O&nbsp;Refinements</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/dclas.html">&nbsp;D&nbsp;C&nbsp;+&nbsp;Resources</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/ansis.html">&nbsp;Standards</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/bibli.html">&nbsp;Bibliography</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/libraries.html">&nbsp;Library&nbsp;Functions</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/ascii.html">&nbsp;ASCII&nbsp;Sequence</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/prece.html">&nbsp;Operator&nbsp;Precedence</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/content/c_cpp.html">&nbsp;C++&nbsp;and&nbsp;C</a></li>
+     <li><script type="text/javascript" src="./Encapsulation _ Member Operators_files/workshops.js.download"></script><a href="https://ict.senecacollege.ca/~oop244/dynamic/workshops/index.html">Workshops</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/assignments/index.html">Assignments</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/handouts/index.html">Handouts</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/practice/index.html">Practice</a></li>
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/resources/index.html">Resources</a></li>
+    </ul>
+   </td>
+  </tr><!-- Content Area Footer -->
+
+  <tr class="navigate">
+   <td class="panel3" align="center">
+    <table class="panel2" width="95%" summary="footer">
+     <tbody><tr>
+      <td align="left">&nbsp;&nbsp; <a href="https://ict.senecacollege.ca/~oop244/pages/content/overl_p.html" class="text3"><img src="./Encapsulation _ Member Operators_files/Printer.gif" height="15" width="10" alt="Printer Friendly Version of this Page">&nbsp;print this
+      page</a>&nbsp;&nbsp;</td>
+
+      <td align="right">&nbsp;&nbsp;<a href="https://ict.senecacollege.ca/~oop244/pages/content/overl.html#top" class="text3">Top&nbsp; <img src="./Encapsulation _ Member Operators_files/ArrowToT.gif" height="15" width="15" alt="Go Back to the Top of this Page"></a></td>
+     </tr>
+    </tbody></table>
+   </td>
+  </tr><!-- Footer -->
+
+  <tr>
+   <!-- Left Panel -->
+
+   <td class="panel1 lateral center">
+    <!-- Lateral Motion Control -->
+
+    <table width="90%" class="center" summary="previous next">
+     <tbody><tr>
+      <td class="half" align="left"><a href="https://ict.senecacollege.ca/~oop244/pages/content/membe.html" class="text3"><img src="./Encapsulation _ Member Operators_files/ArrowToL.gif" height="15" width="15" class="panel1" alt="Previous Reading">&nbsp;&nbsp;Previous:
+      The Current Object</a></td>
+
+      <td class="half" align="right"><a href="https://ict.senecacollege.ca/~oop244/pages/content/deepc.html" class="text3">Next: Classes and Resources&nbsp;&nbsp; <img src="./Encapsulation _ Member Operators_files/ArrowToR.gif" height="15" width="15" class="panel1" alt="Next Reading"></a></td>
+     </tr>
+    </tbody></table>
+    <br>
+    <!-- Alternate Navigation Links -->
+
+    <ul id="altnav" class="center">
+     <li><script type="text/javascript" src="./Encapsulation _ Member Operators_files/ict.js.download"></script><a href="https://ict.senecac.on.ca/">ICT</a></li>
+
+     <!--<li><a href="https://cs.senecac.on.ca/~bsd">BSD Home</a></li>-->
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/index.html">Home</a></li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Member Operators_files/outline.js.download"></script><a href="http://www.senecacollege.ca/ssos/findwithoutsemester/oop244/sict">Outline</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/timeline.html">Timeline&nbsp;</a></li>
+    </ul>
+
+    <ul id="altnav2" class="center">
+     <li><a class="active" href="https://ict.senecacollege.ca/~oop244/pages/content/index.html">Notes</a></li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Member Operators_files/classroom_a.js.download">
+</script><a href="https://scs.senecac.on.ca/~ipc144/pages/content/index.html">IPC Notes</a>
+     </li>
+
+     <li>
+      <script type="text/javascript" src="./Encapsulation _ Member Operators_files/classroom_b.js.download">
+</script><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a>
+     </li>
+
+     <li><script type="text/javascript" src="./Encapsulation _ Member Operators_files/workshops.js.download"></script><a href="https://ict.senecacollege.ca/~oop244/dynamic/workshops/index.html">Workshops</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/assignments/index.html">Assignments</a></li>
+
+     <li><a href="https://ict.senecacollege.ca/~oop244/pages/instructors/index.html">Instructor</a></li>
+    </ul>
+    <br>
+    <!-- Bottom Line -->
+
+    <table cellpadding="1" width="90%" summary="bottom line">
+     <tbody><tr>
+      <td class="w33 text3">&nbsp;&nbsp;Designed by Chris
+      Szalwinski&nbsp;&nbsp;</td>
+
+      <td class="w33 center"><a href="https://ict.senecacollege.ca/~oop244/pages/copyright.html" class="text3">Copying From This Site</a></td>
+
+      <td class="w33 text3" align="right">
+       <script type="text/javascript">
+//<![CDATA[
+                        var lm = document.lastModified.slice(0,-3);
+                        document.write("Last Modified: " +lm)
+       //]]>
+       </script>Last Modified: 02/03/2019 14:54&nbsp;&nbsp;
+      </td>
+     </tr>
+    </tbody></table>
+   </td><!-- Logo - Right Bottom Corner -->
+
+   <td class="panel2 w150" align="center"><img src="./Encapsulation _ Member Operators_files/Logo.gif" alt="Logo" height="73" width="85"><br><a rel="license" href="http://creativecommons.org/licenses/by/2.5/ca/"><img alt="Creative Commons License" style="border-width:0" src="./Encapsulation _ Member Operators_files/88x31.png"></a></td>
+  </tr>
+ </tbody></table>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

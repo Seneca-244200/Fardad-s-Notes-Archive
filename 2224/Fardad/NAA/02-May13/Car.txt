@@ -1,0 +1,19 @@
+wheels
+Engine
+Window
+Seats
+Steering Wheel
+Horn
+
+// Car for carrying passengers...
+How many seats.. 
+Aircond....
+
+Based on your need , (Business logic) the specs of an object changes. // your abstraction changes
+// abstraction is to concentrate on what you need and ingore the rest.
+
+// What does a car do?
+
+move
+turn
+stop

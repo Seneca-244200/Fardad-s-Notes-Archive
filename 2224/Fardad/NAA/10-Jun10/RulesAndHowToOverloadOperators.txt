@@ -1,0 +1,75 @@
+1- The operator must exist to be overload (syntax)
+2- The nature of the operator matches the   (concept)
+   action or is suitable for it or it 
+   makes sense to create a new meaning 
+   for it.
+3- Can I implement the operator as a 
+   method (member func)?  if you really 
+   can't then it will be a helper (stand 
+   online)
+4- What is the signature of the 
+   operator (without considering 
+   references or being constant)
+5- Based on the business logic (the 
+   requirement and nature of the operator)
+   change types to reference and make 
+   them constant if needed.
+
+the "type?" could be compound (i.e. class) or primitive (i.e int, double, etc.)
+typeA TA;
+typeB TB;
+typeC TC;
+
+TA = TB @ TC:
+Binary:
+   Method:
+   typeA typeB::operator@(typeC) // general signature before applying modifiers based on the logic of the program
+   TC is not changed and is a compound type:
+      typeA typeB::operator@(const typeC& C);
+   TB is not changed:
+      typeA typeB::operator@(const typeC& C)const;
+   TB is not changed but TC is:
+      typeA typeB::operator@(typeC& C)const;
+   TA is not A copy and can not change
+      const typeA& typeB::operator@(typeC C);
+
+   Helper:
+   typeA operator@(typeB leftOP, typeC leftOP) // general signature for helper operator overload (NOT RECOMMENDED)
+   typeA operator@(double leftOP, typeC leftOP)
+   TC is not changed and typeB is a primitive (int, double, float)
+      typeA operator@(typeB left,const typeC& right);
+   both TB and TC are not changed:
+      typeA operator@(const typeB& left,const typeC& right);
+   TB is not changed but TC is:
+      typeA operator@(const typeB& left, typeC& right);
+   TA is not A copy and can not change
+      const typeA& operator@(typeB& left, typeC& right);
+
+Unary:
+typeA TA;
+typeB TB;
+
+TA = @TB;   // most common: prefix
+Method:
+   typeA typeB::operator@(); // genral signature
+   TB is not changed
+      typeA typeB::operator@()const;
+   TA is not a copy
+      typeA& typeB::operator@()const;
+   TA is not a copy and will not change
+      const typeA& typeB::operator@()const;
+Helper:
+   typeA operator(typeB operand) // general signature
+   TB is changed
+      typeA operator@(type& B);
+   TB is not changed
+      typeA operator@(const type& B);
+   TA is not a copy
+      typeA& operator@(const type& B);
+   TA is not a copy and will not change
+      const typeA& operator@(const type& B);
+Method: (Postfix)
+TA  = TB@;   // only for ++ and --
+    typeA typeB::operator@(int); // int is only flag to indicate that the operator@ is postfix
+Helper:
+    typeA operator@(typeB,int)

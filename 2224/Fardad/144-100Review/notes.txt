@@ -1,0 +1,48 @@
+c++ 1.cpp 2.cpp 3.cpp main.cpp -o exe
+c++ -o exe 2.cpp 1.cpp main.cpp 3.cpp 
+
+two programs are called:
+1- compiler (called 4 times separately)
+2- linker
+
+
+char = 8 bits : 0-255
+short  
+int    
+long   
+long long 
+
+
+// you should never test two real numbers (floating point) for equality
+float
+double
+long double
+
+double a = 3;   2.999999999999999999999999999999999999
+double b = 3;   3.000000000000000000000000000000000001
+
+if( a == b){ false   
+}
+
+// part of the language, (pre structured programming)
+// Do not use these
+goto
+continue (goto the begining of block)
+break (with the exception of switch) (goto right after the block)
+
+
+
+// nesting;
+
+if(){
+   if(){
+   }
+   else{
+      if(){
+         if(){
+         }
+         else{
+         }
+      }
+   }
+}

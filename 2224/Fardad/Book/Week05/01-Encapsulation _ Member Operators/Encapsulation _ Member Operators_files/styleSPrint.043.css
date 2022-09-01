@@ -1,0 +1,25 @@
+/* styleSPrint.css */
+
+/* include style.043.css */
+
+body	{ 
+	background: #ffffff;
+	}
+a	{ 
+	text-decoration: underline;
+	color: #0000ff; 
+	vertical-align: top;
+	}
+a:hover	{ 
+	background: #EDEDFE; 
+	color: #0000ff;
+	}
+.text0, .text1, .text2, .text3, .text4, .text9	{ 
+	font-family: "Times New Roman", serif; 
+	}
+.texthead { 
+	font-family: "Times New Roman", serif; 
+	font-size: x-large; 
+	font-weight: bold; 
+	color: red;
+	}

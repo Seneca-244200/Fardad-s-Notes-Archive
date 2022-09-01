@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sdds::Animal" Collapsed="true">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAACAAAAAAAAIAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sdds::Bird" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwAAAAAAAAACAAAAAAAAAAAEEAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>bird.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sdds::Budgie" Collapsed="true">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAACAAAAABAAAACAEAACAAAAAAAAAAYA=</HashCode>
+      <FileName>budgie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sdds::Cat" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAQAAACAAAAAAAAAAAAEAAAAAAAAAAgACAA=</HashCode>
+      <FileName>cat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sdds::GoldFish" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAACAAAAAACAAAAAAIAAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>goldfish.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sdds::Pet" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAACACAAAAAAAAAAAAEAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>pet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

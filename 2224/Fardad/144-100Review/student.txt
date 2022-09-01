@@ -1,0 +1,42 @@
+Name: Abraham Simpson
+Student Number: 324543
+GPA: 3.9
+Name: Alice Glick
+Student Number: 459608
+GPA: 1.9
+Name: Allison Taylor
+Student Number: 747954
+GPA: 3.2
+Name: Apu Nahasapeemapetilon
+Student Number: 290816
+GPA: 2.6
+Name: Bart Simpson
+Student Number: 753102
+GPA: 3.9
+Name: Bernice Hibbert
+Student Number: 242653
+GPA: 3.8
+Name: Carl Carlson
+Student Number: 241968
+GPA: 3.7
+Name: Homer Simpson
+Student Number: 413084
+GPA: 2.9
+Name: Lisa Simpson
+Student Number: 693664
+GPA: 4.0
+Name: Luann Van Houten
+Student Number: 737447
+GPA: 2.3
+Name: Martin Prince
+Student Number: 575687
+GPA: 3.5
+Name: Maude Flanders
+Student Number: 272754
+GPA: 1.7
+Name: Sarah Wiggum
+Student Number: 920562
+GPA: 2.0
+Name: Surly Duff
+Student Number: 146127
+GPA: 2.6

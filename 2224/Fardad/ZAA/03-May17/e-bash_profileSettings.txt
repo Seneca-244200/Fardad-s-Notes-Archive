@@ -1,0 +1,9 @@
+add the follow to your .bash_profile in your matrix account for easy submissiona and compilation:
+
+# 244sub submits to fardad
+alias 244sub = "~fardad.soleimanloo/submit"
+# wallc++ compiles with all warnings and c++11 standards plus debugging information
+alias wallc++ = "g++ -Wall -std=c++11 -g"
+# runs a program with memory check 
+alias vrun = "valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-origins=yes"
+

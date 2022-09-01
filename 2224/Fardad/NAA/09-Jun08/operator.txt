@@ -1,0 +1,38 @@
+Binary:
+leftOperand @ rightOperand
+
+A + B   // no side effect
+foo(A + B);
+
+
+C += D  // has side-effect
+
+a += 2
+
+cout << "Hello"
+display(cout << "Hello");
+
+
+i = 3;
+
+Unary:
+prefix
+@ operand
+
+-2 // no side effect
+foo(-2);
+
++b  // no side effect
+
+!A  // no side effect
+
+++a // has side-effect
+
+
+foo(++a);
+postfix:
+
+z++;
+foo(z++);
+a--;
+

@@ -1,0 +1,11 @@
+add these line to .bash_profile in your matrix account for eash of compilation debugging and submission
+
+aliananos wg++="g++ -Wall -std=c++11 -g"
+alias vrun="valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-origins=yes"
+alias 244sub="~fardad.soleimanloo/submit"
+
+
+
+wg++ is the command for compilation
+vrun is to run an executable for memory check
+244sub is to submit work to fardad.
