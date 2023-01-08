@@ -1,0 +1,51 @@
+Binary operator:
+
+A + B:
+   A => left operand
+   B => right operand
+   + => the operator
+
+Unary operator (prefix):
+
+++A:
+  A => operand
+  ++ => operator
+
+Only in C++;
+Unary operator (postfix)
+A++:
+   A => operand
+   ++ => operator
+B--:
+   B => operand
+   -- => operator
+
+Some operators may have side effect;
+
+int a, b , c;
+....
+a = b + c;    // + in this case does not have side effect
+              // + with two integer operands does not have side effect
+a = b - c;
+
+a = b += c;   // += in this case has side effect
+              // += with two integer operands does have side effect
+
+How to overload binary operators in C++:
+
+   As a member:
+   // a type may be a class or a primitive type.
+
+   class A;
+   A a;
+   typeB b;
+   typeC c;
+
+   c = a @ b;
+
+   typeC A::operator@(typeB rightOperand);  (*this is the leftOperand)
+
+   As a non-member (Helper) function:
+
+   typeC operator@(A leftOperand, typeB rightOperand);
+

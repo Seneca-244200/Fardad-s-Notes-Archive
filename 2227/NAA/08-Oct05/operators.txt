@@ -1,0 +1,98 @@
+Binary operator:
+A + B
+   A => left operand
+   B => right operand
+   + => operator
+
+Unary Operators:
+prefix:
+++A:
+   A => the operand
+   ++ => the operator
++B:
+   B => the operand
+   + => the operator
+!C:
+   C => operand
+   ! => operator
+
+2 post fix unary operators
+
+B++;
+   B => the operand
+   ++ => postfix operator
+C--;
+   C => the opreand
+   -- => postfix operator
+
+Some operators may have side effect:
+int a, b, c;
+
+a = b + c;  // + no sideeffect
+            // = modifies left but no effect on right.
+
+a = b += c; // += modifies the left no effect on right;
+
+
+Unary operator side effect:
+
+a = !b;  // ! no side effect
+
+A = ++B;  // ++ modifies its oprator
+
+
+How to overload operators in C++:
+
+As a member:
+
+Class Aclass;
+Aclass a;
+typeB b;
+typeC c;
+
+c <- a @ b
+
+typeC Aclass::operator@(typeB rightOperand)// left oprand is *this 
+    // has sideeffect on left operand
+
+typeC Aclass::operator@(typeB rightOperand)const// left oprand is *this 
+    // has no sideeffect 
+
+typeC Aclass::operator@(typeB& rightOperand)const// left oprand is *this 
+    // has sideeffect on right operator
+
+typeC Aclass::operator@(const typeB& rightOperand)const// left oprand is *this 
+    // has no sideeffect
+
+As a helper:
+
+Class Aclass;
+Aclass a;
+primitive b;
+typeC c;
+
+
+c = b @ a;
+
+
+typeC operator@(primitive leftOperand, Aclass rightOperand)//
+    // no side effect
+
+typeC operator@(primitive leftOperand,const Aclass& rightOperand)//
+    // no side effect
+
+typeC operator@(primitive& leftOperand, Aclass rightOperand);
+    // effects left operand
+
+typeC operator@(primitive& leftOperand, Aclass& rightOperand);
+    // effects both left and right operand
+
+typeC operator@(const primitive& leftOperand, Aclass& rightOperand);
+    // effects right operand
+
+typeC operator@(primitive leftOperand, Aclass& rightOperand);
+    // effects right operand
+
+
+
+

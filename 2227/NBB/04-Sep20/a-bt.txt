@@ -1,0 +1,41 @@
+fine
+	adjective: of high quality.
+	adjective: (of a thread, filament, or person's hair) thin.
+	noun: very small particles found in mining, milling, etc.
+	adverb: in a satisfactory or pleasing manner; very well.
+
+fine
+	adjective: of high quality.
+	adjective: (of a thread, filament, or person's hair) thin.
+	noun: very small particles found in mining, milling, etc.
+	adverb: in a satisfactory or pleasing manner; very well.
+
+fine
+	adjective: of high quality.
+	adjective: (of a thread, filament, or person's hair) thin.
+	noun: very small particles found in mining, milling, etc.
+	adverb: in a satisfactory or pleasing manner; very well.
+
+
+struct TD{
+   char m_type[64];
+	char m_def[1014];
+};
+read TD
+skip a tab, read upto ':',  skip ": ", read upto '\n'; skip '\n'
+scanf(...,"\t%[^:]: %[^\n]\n",...);
+
+struct Word{
+   char m_word[64];
+	TD m_td[8];
+	int m_tdCnt;
+};
+read Word
+read upto '\n'; skip '\n""; read TD up 8 time or if it fails; skip '\n'
+
+struct Dictionary{
+   Word m_word[100];
+	int m_wCnt;
+}
+read dictionary
+read words upto 100 or if it fails

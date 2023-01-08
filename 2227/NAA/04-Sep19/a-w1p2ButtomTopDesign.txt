@@ -1,0 +1,42 @@
+struct TD{
+	char m_type[64];
+	char m_def[1024;
+};
+struct Word{
+	char m_value[64];
+	int m_tdCnt;
+	TD m_td[8];
+};
+struct Dictionary{
+	Word m_wd[100]
+	int m_wdCnt;
+};
+
+readTypeAndDef:
+	skip tab, read upto ':', skip the ": ", read upto '\n', skip the '\n'
+	fscanf(...,"\t%[^:]: %[^\n]\n",...) == 2 success
+
+readTheWord:
+	read upto '\n', skip the'\n'
+	read typeAnDef upto 8 times or if it fails
+
+readTheDictionary:
+	readTheWord upto 100 time, of if it fails
+
+fine
+	adjective: of high quality.
+	adjective: (of a thread, filament, or person's hair) thin.
+	noun: very small particles found in mining, milling, etc.
+	adverb: in a satisfactory or pleasing manner; very well.
+
+fine
+	adjective: of high quality.
+	adjective: (of a thread, filament, or person's hair) thin.
+	noun: very small particles found in mining, milling, etc.
+	adverb: in a satisfactory or pleasing manner; very well.
+
+fine
+	adjective: of high quality.
+	adjective: (of a thread, filament, or person's hair) thin.
+	noun: very small particles found in mining, milling, etc.
+	adverb: in a satisfactory or pleasing manner; very well.

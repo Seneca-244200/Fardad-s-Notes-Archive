@@ -1,0 +1,20 @@
+#include <iostream>
+
+namespace hr {
+	struct Teacher {
+		int m_years;
+		double m_salary;
+	};
+}
+namespace edu {
+	struct Teacher {
+		char m_subjects[4][81];
+		int m_semesters[3];
+	};
+}
+int main() {
+	hr::Teacher t1;
+	edu::Teacher t2;
+	std::cout << "namespaces" << std::endl;
+	return 0;
+}
