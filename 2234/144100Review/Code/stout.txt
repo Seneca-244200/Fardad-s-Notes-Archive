@@ -1,0 +1,9 @@
+Name: fred1 soley
+Stno: 12341
+gpa: 1.4
+Name: fred2 soley
+Stno: 12342
+gpa: 2.4
+Name: fred3 soley
+Stno: 12343
+gpa: 3.4
