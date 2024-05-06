@@ -1,0 +1,1 @@
+here is the value of the MyStr object: re

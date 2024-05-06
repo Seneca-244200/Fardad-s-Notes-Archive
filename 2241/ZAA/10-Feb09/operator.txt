@@ -1,0 +1,39 @@
+Atype A;
+Btype B;
+Ctype C;
+
+
+@: operator, B and C are operands
+A = B @ C :     Binary Operators (two operands)  with no side-effect
+A = B + C : when + operator is done, will B or C change? answer NO
+A = B - C;
+A = B / C;
+
+A = B += C;   when += operator is done, will B or C change?
+               Binary Operators (two operands)  with side-effect
+
+Atype Btype::operator+=(Ctype C);
+Atype Btype::operator+=(const Ctype& C);
+
+A = B -= C;
+Atype Btype::operator-=(const Ctype&C);
+
+cout << C;
+???? can not be done since cout's source code is not ours to modify
+
+
+A = @B;      Prefix Unary operators (one operand) with no side-effect
+A = -B;
+A = !B;
+
+A = ++B;   Prefix Unary operators (one operand) with side-effect
+
+Atype Btype::operator++();
+
+
+A = B++;   Postfix Unary operators (one operand) with side-effect
+
+Atyep Btype::operator++(int); // int mean this one is postfix not prefix
+
+A = B--;
+
