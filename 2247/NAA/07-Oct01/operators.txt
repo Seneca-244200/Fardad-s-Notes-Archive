@@ -1,0 +1,96 @@
+Atype A;
+Btype B;
+Ctype C;
+
+A @ B
+A and b: operands
+@: operator
+A + B
+C - A
+
+// binary operators with no side-effect
+A = B + C      
+A = B - C     
+A = B / C   
+A = B > C
+A = B && C
+B = 10
+C = 4
+cout << B - C <<',' << B <<',' << C; 
+// 6,10,4
+cout << B -= C <<','; //output 6,   // B = 6, C=4
+cout << B <<','       //output 6,
+cout << C;            //output 4
+// 6,6,4
+
+// binary operators with no side-effect
+A = B @ C  // A will be set to B@C and B and C remain the same
+A = B / C;
+A = B.operator@(C); // they are usually queries
+Atype Btype::operator@(const Ctype& C)const;  // faster
+Atype Btype::operator@(Ctype C)const;         // more load
+
+// binary operator with side-effect
+A = B @ C // A will be set to B@C and B will be set to B@C and C remains the same     
+A = B /= C;
+                                 // modifier
+Atype Btype::operator@(const Ctype& C);  // faster     leftside effect
+Atype Btype::operator@(Ctype C);         // more load  leftside effect
+
+Atype Btype::operator@(Ctype& C)const;  // faster     right side effect
+
+Atype Btype::operator@(Ctype& C);  // faster     right&left side effect
+
+helper general signature:, change the constantness and reference accessing if needed
+Atype operator@(Btype leftOper, Ctype RightOper)
+
+// prefix unary operators with no side effect
+A = @B
+A = B.operator@();
+Atype Btype::operator@()const;
+
+A = -B;
+A = !B
+
+
+cout << -B <<"," << !B << "," << B;
+// prefix unary operator with side effect
+A = @B;
+A = B.operator@();
+Atype Btype::operator@();
+
+cout << ++B << ",";
+cout << --C << ",";
+cout << B << ",";
+cout << C;
+
+Helper:
+
+helper general signature:, change the constantness and reference accessing if needed
+Atype operator@(Btype B);
+
+
+// post fix operator with side effect
+
+
+B = 10;
+C = 10;
+cout << B++ << ",";
+cout << C-- << ",";
+cout << B << ",";
+cout << C;
+A = B.operator@(int);
+Atype Btype::operator@(int);
+
+helper general signature:, change the constantness and reference accessing if needed
+Atype operator@(Btype B, int);
+
+
+Question for the quiz for operators:
+
+overload an operator, then do it as a helper!
+
+
+Queistio for the quiz for construction and DMA
+
+Create a constructor for a dyaminic attirbute, and the destructor

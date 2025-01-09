@@ -1,0 +1,54 @@
+Atype A;
+Btype B;
+Ctype C;
+
+A @ B
+A and b: operands
+@: operator
+A + B
+C - A
+
+// binary operators with no side-effect
+A = B + C      
+A = B - C     
+A = B / C   
+A = B > C
+A = B && C
+B = 10
+C = 4
+cout << B - C <<',' << B <<',' << C; 
+// 6,10,4
+cout << B -= C <<','; //output 6,   // B = 6, C=4
+cout << B <<','       //output 6,
+cout << C;            //output 4
+// 6,6,4
+
+// binary operators with no side-effect
+A = B @ C  // A will be set to B@C and B and C remain the same
+A = B / C;
+// binary operator with side-effect
+A = B @ C // A will be set to B@C and B will be set to B@C and C remains the same     
+A = B /= C;
+
+// prefix unary operators with no side effect
+B = 10;
+A = -B;
+A = !B
+
+cout << -B <<"," << !B << "," << B;
+// prefix unary operator with side effect
+B = 10;
+C = 10;
+cout << ++B << ",";
+cout << --C << ",";
+cout << B << ",";
+cout << C;
+// post fix operator with side effect
+
+B = 10;
+C = 10;
+cout << B++ << ",";
+cout << C-- << ",";
+cout << B << ",";
+cout << C;
+

@@ -1,0 +1,8 @@
+int main( ) {
+   int ipc = 144;
+   int age;
+   char ch;
+   cout << "Hello OOP" << 244;
+   cout << " from IPC" << ipc << "!" << endl;
+   cout << "Welcome, how old are you\n> ";
+   cin >> age;

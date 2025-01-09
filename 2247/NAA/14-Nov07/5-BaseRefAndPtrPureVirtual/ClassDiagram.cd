@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="seneca::Animal">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAAAAAAAAACAAAAAAAAIAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="seneca::Cat" Collapsed="true">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAQAAACAAAAAAAAAAAAEAAAAAAAAAAgACAA=</HashCode>
+      <FileName>cat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="seneca::Dog" Collapsed="true">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAACAAAAAAAAACAAEAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Dog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
