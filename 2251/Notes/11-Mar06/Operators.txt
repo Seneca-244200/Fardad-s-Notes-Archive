@@ -1,0 +1,149 @@
+Atype A, A1
+Btype B;
+Ctype C;
+
+A @ B
+A and b: operands
+@: operator
+A + B
+C - A
+
+int a = 3 > 4;
+
+// binary operators with no side-effect
+A = B + C      
+A = B - C     
+A = B / C   
+A = B > C
+A = B && C
+
+A = B @ C;
+
+General signature for implemting a binary MEMBER operator
+
+AType BType::operator@(Ctype); 
+
+if B and C remain the same after the operatoin, the operator has no side effect
+
+No Side effect:
+AType BType::operator@(Ctype)const; 
+AType BType::operator@(const Ctype&)const; 
+A = B + C;
+
+if B or C change after the operatoin, the operator HAS side effect
+
+if C changes // this never happens in standard binary operator
+Right side effect:
+AType BType::operator@(Ctype& )const; 
+
+if B changes 
+Left side effect
+AType BType::operator@(Ctype); 
+AType BType::operator@(const Ctype&); // recommended
+A = B += C;
+
+Right side effect
+AType BType::operator@(Ctype&)const; 
+A = B >> C;
+
+
+
+General signature for unary prefix MEMBER operator
+
+// prefix Unary operators without sideeffect
+
+A = -B;
+A = !B;
+
+AType BType::operator@()const;
+AType BType::operator-()const;
+AType BType::operator!()const;
+
+AType BType::operator+=()const;// you can create an undary, it must be unary itself
+
+// prefix Unary operators with sideeffect
+
+A = ++B;
+A = --B
+
+AType BType::operator@();
+AType BType::operator++();
+AType BType::operator--();
+
+
+// postfix unary operators:
+
+A = B++;
+A = B--;
+//int is not and argument and only means postfix
+AType BType::operator++(int);
+AType BType::operator--(int);
+
+
+
+// index operator
+// what is being indexed is the left operand and therefore the owner of the operation method
+// the index itself is the right operand the therefore the argument of the operation method
+A = B[C];
+// With Side effect
+AType Btype::operator[](CType);
+AType& Btype::operator[](CType);
+// Witout Side effect
+AType Btype::operator[](CType)const;
+const AType& Btype::operator[](CType)const;
+
+class phoneBook{
+public:
+    long operator[](const char* name);
+
+}
+
+PhoneBook Seneca;
+                             value               key
+cout << "Fardad's phone is: " << Seneca["Fardad Soleimanloo"] << endl;
+
+// the output will be: 4167649397
+
+
+// type conversion operator
+// B = (BType)A1;  // C style
+// B = Btype(A1);  // C++ style
+
+AType::operator Btype()const;
+
+
+
+// Non-member binary operator overloads
+// we right these in 2 cases only:
+
+// 1 - when left operand is a primitive type 
+// and cannot have a method, therefor helper function is needed
+// 
+// 2- when left operand is a composite type but the source code is not editable. 
+// or does not belong to you to modify
+//
+
+
+A = B @ C;
+// no side effect
+AType operator@(Btype, CType);
+AType operator@(const Btype&,cosnt CType&);
+
+
+class Classroom{
+   int size;
+   public:
+   Classroom(int s){
+      size = s;
+   }
+   operator int()const{
+     return size;
+   }
+}
+
+Classroom C(40);
+
+cout << "The size of class room is good for " << int(C) << " students" << Endl;
+
+
+

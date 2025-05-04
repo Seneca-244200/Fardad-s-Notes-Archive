@@ -1,0 +1,48 @@
+Atype A, A1
+Btype B;
+Ctype C;
+
+A @ B
+A and b: operands
+@: operator
+A + B
+C - A
+
+int a = 3 > 4;
+
+// binary operators with no side-effect
+A = B + C      
+A = B - C     
+A = B / C   
+A = B > C
+A = B && C
+
+// B and C remain the same after the operatoin
+
+A1 = C + ( A = B);
+
+A = B += C;
+
+// prefix Unary operators without sideeffect
+
+A = -B;
+A = !B;
+
+// prefix Unary operators with sideeffect
+
+A = ++B;
+A = --B
+
+// postfix unary operators:
+
+A = B++;
+A = B--;
+
+// index operator
+A = B[3];
+
+
+// type conversion operator
+// A = (BType)A1;
+
+

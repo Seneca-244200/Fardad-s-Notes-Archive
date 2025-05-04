@@ -1,0 +1,90 @@
+Atype A, A1
+Btype B;
+Ctype C;
+
+A @ B
+A and b: operands
+@: operator
+A + B
+C - A
+
+int a = 3 > 4;
+
+// binary operators with no side-effect
+A = B + C      
+A = B - C     
+A = B / C   
+A = B > C
+A = B && C
+
+A = B @ C;
+
+General signature for implemting a binary MEMBER operator
+
+AType BType::operator@(Ctype); 
+
+if B and C remain the same after the operatoin, the operator has no side effect
+
+No Side effect:
+AType BType::operator@(Ctype)const; 
+AType BType::operator@(const Ctype&)const; 
+A = B + C;
+
+if B or C change after the operatoin, the operator HAS side effect
+
+if C changes // this never happens in standard binary operator
+Right side effect:
+AType BType::operator@(Ctype& )const; 
+
+if B changes 
+Left side effect
+AType BType::operator@(Ctype); 
+AType BType::operator@(const Ctype&); 
+A = B += C;
+
+
+
+General signature for unary prefix MEMBER operator
+
+// prefix Unary operators without sideeffect
+
+A = -B;
+A = !B;
+
+AType BType::operator@()const;
+AType BType::operator-()const;
+AType BType::operator!()const;
+
+
+// prefix Unary operators with sideeffect
+
+A = ++B;
+A = --B
+
+AType BType::operator@();
+AType BType::operator++();
+AType BType::operator--();
+
+
+// postfix unary operators:
+
+A = B++;
+A = B--;
+//int is not and argument and only means postfix
+AType BType::operator++(int);
+AType BType::operator--(int);
+
+
+
+// index operator
+A = B[C];
+// With Side effect
+AType Btype::operator[](CType);
+// Witout Side effect
+AType Btype::operator[](CType)const;
+
+
+// type conversion operator
+// B = (BType)A1;
+
+AType::operator Btype()const;
