@@ -1,0 +1,4 @@
+      Hi my name if Fred
+40 years I have been in Canada
+1235.67890$ I make a month
+And I am tring to show how thigs work in files

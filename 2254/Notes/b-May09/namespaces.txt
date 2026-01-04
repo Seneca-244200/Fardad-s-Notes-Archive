@@ -1,0 +1,58 @@
+// HR file  to create a student sturcture
+
+filename hr.h
+
+namespace hr{
+
+   struct Student{
+      int id;
+      double salary;
+      char name[51];
+
+   };
+
+}
+
+
+namespace hr{
+
+   void calucatesalary(){
+
+
+   }
+
+
+
+}
+
+
+
+
+// EDU file to create a student structure:
+
+file edu.h
+
+namespace edu{
+
+   struct Student{
+      int semester;
+      int id;
+      double gpa;
+      char name[51];
+
+   };
+
+}
+
+// main system
+
+#include "hr.h"
+#include "edu.h"
+using namespace edu;
+
+int whatever(){
+   hr::Student hrST;
+   Student eduSt;  // edu::Student by default because of the "using namespace edu";
+
+   return 0;
+}

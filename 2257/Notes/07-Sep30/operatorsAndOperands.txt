@@ -1,0 +1,44 @@
+Atype A;
+Btype B;
+Ctype C;
+
+A @ B
+A and b: operands
+@: operator
+
+A + B
+A - B
+
+// binary operators with no side-effect
+A = B + C      
+A = B - C     
+A = B / C   
+A = B > C
+A = B && C
+A = B < C
+
+// binary operators with no side-effect
+A = B @ C  // A will be set to B@C and B and C remain the same
+// binary operator with side-effect
+A = B @ C // A will be set to B@C and B and/or C may change after the operation 
+
+A = B += C;
+A = B = C;
+
+// Prefix Unary operators with no side-effect
+A = @B
+A = -B
+A = +C
+
+// Prefix Unary operators with side-effect
+A = @B
+A = ++B
+A = --C
+
+// Postfix Unary operators with side-effect
+A = B@
+A = B++
+A = C--
+
+// Postfix Unary operators with no side-effect
+A = B@

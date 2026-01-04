@@ -1,0 +1,43 @@
+A @ B
+
+
+Binary operators:
+
+With side effect
+R = A += B;
+
+R = A -= B;
+
+R = B = C;
+
+Without side effect
+
+R = A + B;
+
+R = C - D;
+
+R = X > Y;
+
+
+Unrary Operators:
+
+@A
+
+With side effect
+R = --A
+
+R = ++A
+
+Without side effect
+
+R = !A;
+
+R = -B;
+
+R = +C;
+
+Postfix Unary Operator
+
+R = A--;
+
+R = A++;
