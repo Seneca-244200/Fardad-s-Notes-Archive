@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+#include "Utils.h"
+#include "Cat.h"
+namespace seneca {
+
+   Cat::Cat():m_numOfLives{9} {
+      name( "Garfield" );
+      if(seneca::debug )
+         cout << "    as defaulted cat with " << m_numOfLives << endl;
+   }
+
+   Cat::Cat(const char* thename, int numOfLives)
+      : Animal(thename), m_numOfLives{(numOfLives > 9 || numOfLives < 1) ? 9 : numOfLives}
+   {
+    //  Animal(thename); common mistake, don't do it
+      if (seneca::debug) cout << "    as a cat with " << m_numOfLives << " lives" << endl;
+   }
+
+   void Cat::act() {  // shadows the Animals act;
+      cout << "Act playful, " << name() << " the Cat" << endl;
+   }
+ /*  void Cat::move() {
+      cout << "Move like " << name() << " the Cat" << endl;
+   }*/
+
+   void Cat::sound() {
+      Animal::sound(); // invoking Animal classe's sound() method
+      cout << "Meow!" << endl;
+   }
+   void Cat::play() {
+      cout << name() << " the cat is playing " << endl;
+   }
+   Cat::~Cat() {
+      if (seneca::debug) cout << "Removing " << name() << " the Cat" << endl;
+   }
+}

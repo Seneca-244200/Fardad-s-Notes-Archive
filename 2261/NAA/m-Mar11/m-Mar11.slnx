@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="1-Animal/1-Animal.vcxproj" Id="cd3e7cca-d918-4c7b-a430-04e6e4a28a11" />
+  <Project Path="2-Cat/2-Cat.vcxproj" Id="d36c0936-b2b7-4d6d-9ea9-b2a25b82d85c" />
+  <Project Path="3-BaseRefAndPtr/3-BaseRefAndPtr.vcxproj" Id="3b41b9fc-eaeb-4ac5-b709-f7248f085b52">
+    <Platform Project="Win32" />
+  </Project>
+  <Project Path="m-Mar11.vcxproj" Id="3df75e1a-cf5b-4809-bea8-eab299ef6906" />
+</Solution>
