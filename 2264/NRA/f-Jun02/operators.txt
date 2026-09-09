@@ -1,0 +1,56 @@
+Binary operators with no side effect
+ A @ B // binary operator (two operands) 
+ a = 2;
+ b = 3;
+ cout << a + b << endl; // + is binary op. 
+ // output 5
+ cout << a << " " << b << endl;
+ // output 2 3    + does not have a side effect
+ cout << a < b << endl
+ // output 1 
+ cout << a << " " << b << endl;
+ // output 2 3    < does not have a side effect
+ 
+Binary operators with side-effect
+ a = 2;
+ b = 3
+ cout << a += b << endl;
+ // output 5
+ cout << a << " " << b << endl;
+ // output 5 3    += does have a side effect
+
+Unary operators:
+
+   a = 2
+   cout << -a << endl;
+	//output -2
+	cout << a << endl;
+	//output 2
+
+	// unary operator - does not have side effect
+
+	int a = 10;
+	int* p = &a;
+
+	cout << *p << endl;
+	// output 10;
+	cout << p << endl;
+	// output remain to be &a (address of a)
+	!a
+
+	@A.
+	
+	a = 10;
+	cout << ++a << endl;
+	//output 11;
+	// a will be 11 after 
+	// ++ unary operator has a side-effect.
+
+THE ONLY EXCEPTION:
+  // post-fix unary operators and they do have side effect
+   a++;
+	b--
+
+	
+
+

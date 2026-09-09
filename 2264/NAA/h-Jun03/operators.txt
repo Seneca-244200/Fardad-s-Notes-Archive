@@ -1,0 +1,29 @@
+Binary operator
+   A @ B // it has two operands (A and B) it does something with A and B and returns a result
+	a = 2;
+	b = 3
+   cout << a + b << endl; // binary operators with no side effect
+	cout << a << endl;
+	cout << b << endl;
+	// output: 5
+	a = 10;
+	b = 30;
+	cout << a += b << endl; // binary operators with side effect
+	// output: 40;
+	cout << a << endl;
+	cout << b << endl;
+
+
+Unary Operators:
+   @ A   // is has one operand and returns a value after processing the operand
+	a = 10; 
+	// a unary operator with no side effect 
+	cout << -a << endl; // output -10
+	cout << a << endl;  // output 10
+	// a unary operator with side effect
+	cout << ++a << endl; // output 11
+	cout << a << endl;  // output 11 
+	// only two postfix unary operators exist. 
+	a++;   we only have two unary post-fix operator with sideeffect
+	a--;
+
